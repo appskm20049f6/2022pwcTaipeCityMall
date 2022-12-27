@@ -63,6 +63,10 @@
         rel="stylesheet"
         href="/style/style.css"
     >
+    <link
+        href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+        rel="stylesheet"
+    >
 
 </head>
 
@@ -74,7 +78,10 @@
 
     <div class="page-1">
 
-        <div class="top-logo">
+        <div
+            class="top-logo"
+            data-aos="fade-down"
+        >
             <img
                 src="/img/index-backgrond-logo.png"
                 alt=""
@@ -83,10 +90,11 @@
         <nav
             class="navbar"
             id="navbar"
+            data-aos="fade-down"
         >
             <a
-                href="#navbar"
-                onclick="ibendoChange1()"
+                href="#ibendo-page1"
+                onclick="ibendoChange(1)"
             >
                 <div class="card card1">
                     <div class="borderline">
@@ -101,7 +109,10 @@
                     <div class="cardtop2">
                         <p>熱鬧</p>
                     </div>
-                    <div class="cardbottom">
+                    <div
+                        class="cardbottom"
+                        id="cardbottom"
+                    >
                         <p>前往</p>
                         <div class="arrow">
                             <div class="arrow1"></div>
@@ -116,8 +127,8 @@
                 </div>
             </a>
             <a
-                href="#navbar"
-                onclick="ibendoChange2()"
+                href="#ibendo-page2"
+                onclick="ibendoChange(2)"
             >
                 <div class="card card2">
                     <div class="borderline">
@@ -147,8 +158,8 @@
                 </div>
             </a></a>
             <a
-                href="#navbar"
-                onclick="ibendoChange3()"
+                href="#ibendo-page3"
+                onclick="ibendoChange(3)"
             >
                 <div class="card card3">
                     <div class="borderline">
@@ -178,8 +189,8 @@
                 </div>
             </a></a>
             <a
-                href="#navbar"
-                onclick="ibendoChange4()"
+                href="#ibendo-page4"
+                onclick="ibendoChange(4)"
             >
                 <div class="card card4">
                     <div class="borderline">
@@ -236,54 +247,71 @@
             <img
                 src="/img/index-title.png"
                 alt=""
+                data-aos="fade-down"
             >
         </div>
         <div
             class="ibendo ibendo-1"
             id="ibendo-1"
+            data-aos="fade-down"
         >
             <img
                 src="/img/ibendopage-backgrond-1.png"
                 alt=""
+                id="ibendo-page1"
+                data-aos="fade-down"
             >
         </div>
         <div
             class="ibendo ibendo-2"
             id="ibendo-2"
+            data-aos="fade-down"
         >
             <img
                 src="/img/ibendopage-backgrond-2.png"
                 alt=""
+                id="ibendo-page2"
+                data-aos="fade-down"
             >
         </div>
         <div
             class="ibendo ibendo-3"
             id="ibendo-3"
+            data-aos="fade-down"
         >
             <img
                 src="/img/ibendopage-backgrond-3.png"
                 alt=""
+                id="ibendo-page3"
+                data-aos="fade-down"
             >
         </div>
         <div
             class="ibendo ibendo-4"
             id="ibendo-4"
+            data-aos="fade-down"
         >
             <img
                 src="/img/ibendopage-backgrond-4.png"
                 alt=""
+                id="ibendo-page4"
             >
         </div>
         <div
             class="ibendo ibendo-5"
             id="ibendo-5"
+            data-aos="fade-down"
         >
             <img
                 src="/img/ibendopage-backgrond.png"
                 alt=""
+                id="ibendo-page"
             >
         </div>
-        <div class="map">
+        <div
+            class="map"
+            data-aos="fade-down"
+        >
             <img
                 src="/img/ibendopage-map.png"
                 alt=""
@@ -307,5 +335,9 @@
 </body>
 
 <script src="/js/app.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
 
 </html>

@@ -47,10 +47,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 5%;
+  margin-top: 20%;
 }
 .top-logo img {
-  width: 70%;
+  width: 65%;
 }
 
 .navbar {
@@ -60,12 +60,12 @@ body {
   align-items: center;
 
   margin: auto;
-  margin-top: 12%;
+  margin-top: -3%;
   object-fit: cover;
   gap: 1rem;
   .card {
-    width: 20rem;
-    height: 40rem;
+    width: 25rem;
+    height: 50rem;
     > .cardtop1 p {
       font-size: 2.5rem;
       line-height: 2.6rem;
@@ -139,7 +139,7 @@ body {
 
 .title {
   width: 100%;
-  margin-top: 3%;
+  margin-top: -2%;
 }
 .title img {
   width: 100%;
@@ -302,4 +302,24 @@ footer img {
       }
     }
   }
+}
+
+.card-change {
+  .borderline {
+    border: 0;
+    background: linear-gradient(176.9deg, #bb836c 11.25%, #cbb674 99.9%);
+  }
+  .card-backgrond {
+    background: white;
+  }
+  .cardbottom {
+    border: 2px solid #947e4e;
+    > .arrow {
+      display: block;
+    }
+  }
+}
+
+//RWD
+@media screen and (max-width: 1920px) {
 }

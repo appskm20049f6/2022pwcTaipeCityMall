@@ -55,11 +55,11 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 5%;
+  margin-top: 20%;
 }
 
 .top-logo img {
-  width: 70%;
+  width: 65%;
 }
 
 .navbar {
@@ -74,14 +74,14 @@ body {
       -ms-flex-align: center;
           align-items: center;
   margin: auto;
-  margin-top: 12%;
+  margin-top: -3%;
   -o-object-fit: cover;
      object-fit: cover;
   gap: 1rem;
 }
 .navbar .card {
-  width: 20rem;
-  height: 40rem;
+  width: 25rem;
+  height: 50rem;
 }
 .navbar .card > .cardtop1 p {
   font-size: 2.5rem;
@@ -134,7 +134,7 @@ body {
 
 .title {
   width: 100%;
-  margin-top: 3%;
+  margin-top: -2%;
 }
 
 .title img {
@@ -323,4 +323,18 @@ footer img {
 .card .cardbottom > .arrow > .arrow2 > img {
   position: absolute;
   width: 1rem;
+}
+
+.card-change .borderline {
+  border: 0;
+  background: linear-gradient(176.9deg, #bb836c 11.25%, #cbb674 99.9%);
+}
+.card-change .card-backgrond {
+  background: white;
+}
+.card-change .cardbottom {
+  border: 2px solid #947e4e;
+}
+.card-change .cardbottom > .arrow {
+  display: block;
 }/*# sourceMappingURL=style.css.map */
