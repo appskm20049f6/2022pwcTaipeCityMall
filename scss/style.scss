@@ -58,7 +58,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-
   margin: auto;
   margin-top: -3%;
   object-fit: cover;
@@ -322,4 +321,109 @@ footer img {
 
 //RWD
 @media screen and (max-width: 1920px) {
+  .top-logo img {
+    width: 55%;
+  }
+  .navbar {
+    .card {
+      width: 18rem;
+      height: 36rem;
+      > .cardtop1 p {
+        font-size: 2.5rem;
+        line-height: 2.6rem;
+      }
+      > .cardtop2 p {
+        font-size: 2.5rem;
+        line-height: 2.6rem;
+      }
+      > .cardbottom p {
+        position: absolute;
+        left: 5%;
+        bottom: 50%;
+        font-size: 2rem;
+        line-height: 1.5rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1680px) {
+  .top-logo img {
+    width: 55%;
+  }
+  .navbar {
+    .card {
+      width: 17rem;
+      height: 34rem;
+      > .cardtop1 p {
+        font-size: 1.7rem;
+        line-height: 1.7rem;
+      }
+      > .cardtop2 p {
+        font-size: 1.7rem;
+        line-height: 1.7rem;
+      }
+      > .cardbottom p {
+        position: absolute;
+        left: 5%;
+        bottom: 50%;
+        font-size: 2rem;
+        line-height: 1.5rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .top-logo img {
+    width: 55%;
+  }
+  .navbar {
+    .card {
+      width: 14rem;
+      height: 28rem;
+      > .cardtop1 p {
+        font-size: 1.7rem;
+        line-height: 1.7rem;
+      }
+      > .cardtop2 p {
+        font-size: 1.7rem;
+        line-height: 1.7rem;
+      }
+      > .cardbottom p {
+        position: absolute;
+        left: 5%;
+        bottom: 50%;
+        font-size: 2rem;
+        line-height: 1.5rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .top-logo img {
+    width: 55%;
+  }
+  .navbar {
+    .card {
+      width: 14rem;
+      height: 28rem;
+      > .cardtop1 p {
+        font-size: 1.7rem;
+        line-height: 1.7rem;
+      }
+      > .cardtop2 p {
+        font-size: 1.7rem;
+        line-height: 1.7rem;
+      }
+      > .cardbottom p {
+        position: absolute;
+        left: 5%;
+        bottom: 50%;
+        font-size: 2rem;
+        line-height: 1.5rem;
+      }
+    }
+  }
 }
