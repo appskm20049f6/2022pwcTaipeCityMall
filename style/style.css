@@ -413,10 +413,10 @@ body {
 }
 .vtubercard .card-1-bottom .ten-1 {
   position: absolute;
-  width: 1.2rem;
-  height: 1.2rem;
+  width: 1.7rem;
+  height: 1.7rem;
   left: 28%;
-  top: -5px;
+  top: -0.6rem;
   background-color: #c4ab7a;
   z-index: 5;
   -webkit-transform: rotate(-45deg);
@@ -424,10 +424,10 @@ body {
 }
 .vtubercard .card-1-bottom .ten-2 {
   position: absolute;
-  width: 1.2rem;
-  height: 1.2rem;
+  width: 1.7rem;
+  height: 1.7rem;
   right: 28%;
-  top: -5px;
+  top: -0.6rem;
   background-color: #c4ab7a;
   z-index: 5;
   -webkit-transform: rotate(-45deg);
