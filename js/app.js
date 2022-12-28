@@ -4,7 +4,8 @@ let ibendo3 = document.querySelector("#ibendo-3");
 let ibendo4 = document.querySelector("#ibendo-4");
 let ibendo5 = document.querySelector("#ibendo-5");
 let navbar = document.querySelector("#navbar");
-console.log(navbar.children[0].children[0].children[4].children[0]);
+
+let title = document.querySelector("#title");
 
 let ibendoChange = (c) => {
   if (c == 1) {
@@ -13,6 +14,7 @@ let ibendoChange = (c) => {
       navbar.children[index].children[0].children[4].children[0].innerHTML =
         "<p>前往</p>";
     }
+    title.innerHTML = `<img src="/img/index-title.png" alt="" data-aos="fade-down" >"`;
 
     navbar.children[0].children[0].children[4].children[0].innerHTML =
       "<p>現在</p>";
@@ -28,6 +30,7 @@ let ibendoChange = (c) => {
     }
     navbar.children[1].children[0].children[4].children[0].innerHTML =
       "<p>現在</p>";
+    title.innerHTML = `<img src="/img/index-title2.png" alt="" data-aos="fade-down" >"`;
     ibendo1.style.display = "none";
     ibendo2.style.display = "flex";
     ibendo3.style.display = "none";
@@ -40,6 +43,7 @@ let ibendoChange = (c) => {
     }
     navbar.children[2].children[0].children[4].children[0].innerHTML =
       "<p>現在</p>";
+    title.innerHTML = `<img src="/img/index-title3.png" alt="" data-aos="fade-down" >"`;
     ibendo1.style.display = "none";
     ibendo2.style.display = "none";
     ibendo3.style.display = "flex";
@@ -52,6 +56,7 @@ let ibendoChange = (c) => {
     }
     navbar.children[3].children[0].children[4].children[0].innerHTML =
       "<p>現在</p>";
+    title.innerHTML = `<img src="/img/index-title4.png" alt="" data-aos="fade-down" >"`;
     ibendo1.style.display = "none";
     ibendo2.style.display = "none";
     ibendo3.style.display = "none";
