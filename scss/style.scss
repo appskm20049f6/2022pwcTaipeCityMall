@@ -189,14 +189,14 @@ body {
 }
 .streamcard {
   position: relative;
-  height: 120rem;
+  height: 110rem;
   width: 100%;
   z-index: 0;
   margin-bottom: 10%;
   > .streamcard-background-1 {
     position: absolute;
     top: 1%;
-    height: 80%;
+    height: 100%;
     width: 100%;
     border: 2px solid #a4a4a4;
     z-index: 1;
@@ -278,14 +278,18 @@ body {
         position: absolute;
         justify-content: center;
         align-items: center;
+        gap: 2%;
         left: 1%;
         top: 1%;
         width: 98%;
         height: 98%;
         border: 6px solid #9b8f72;
         > a {
-          margin-right: 4%;
+          margin-top: 1%;
           text-decoration: none;
+        }
+        .sixup {
+          margin-right: 3%;
         }
       }
     }
@@ -296,13 +300,13 @@ body {
     left: 3%;
     top: 3%;
     width: 70px;
-    height: 150px;
+    height: 220px;
     background: #fffaf5;
     border: 1px solid #dad7d2;
     box-shadow: 6px 6px 7px rgba(0, 0, 0, 0.4);
     > .day {
       position: absolute;
-      top: -22%;
+      top: -15%;
       left: -30%;
       font-family: "Inria Serif";
       font-style: normal;
@@ -343,8 +347,8 @@ body {
   background-color: #ffffff;
   > .card-1 {
     position: relative;
-    width: 90%;
-    height: 80%;
+    width: 95%;
+    height: 90%;
     background-color: #ffffff;
     border-width: 0.3rem 0.3rem 0px 0.3rem;
     border-style: solid;
@@ -355,7 +359,7 @@ body {
       left: 1%;
       top: 1%;
       width: 98%;
-      height: 95%;
+      height: 98%;
       background-color: #ffffff;
       border-width: 2px 2px 2px 2px;
       border-style: solid;
@@ -465,16 +469,19 @@ body {
     > .card-1-bottom2 {
       flex-grow: 5;
       font-weight: 155;
-      font-size: 1.3rem;
+      font-size: 2.3rem;
       display: flex;
       align-items: center;
 
       color: #c4ab7a;
       font-variation-settings: "slnt" 0;
       justify-content: center;
+      top: 0;
+      z-index: 15;
       > p {
+        font-family: "Italianno";
         position: absolute;
-        top: -1;
+        top: 1%;
       }
     }
     > .card-1-bottom3 {
@@ -504,7 +511,7 @@ body {
   }
   > .vtubercard-time {
     position: relative;
-    top: 2.5%;
+    top: 6%;
     font-size: 60px;
     > p {
       font-family: "Italianno";
@@ -692,6 +699,69 @@ footer img {
 .ibendo-2 {
   width: 80%;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.vtuberSelect {
+  width: 65%;
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+
+  font-size: 4.3rem;
+  z-index: 20;
+  top: -9%;
+
+  p {
+    cursor: pointer;
+    background-repeat: no-repeat;
+    margin-right: 4%;
+    font-family: "Italianno";
+  }
+  p:hover {
+    background-image: url("/img/vtuberSelect-background.png");
+  }
+}
+#streamDay {
+  p {
+    font-size: 55px;
+    font-family: "Inria Serif";
+  }
+}
+.littlecard {
+  margin-right: 1%;
+  .little-head-1 {
+    margin: 3%;
+    display: flex;
+    width: 10vw;
+    height: 10vw;
+    border: 2px solid #9b8f72;
+    box-shadow: 4px 4px 5px 2px rgba(98, 92, 77, 0.5);
+    justify-content: center;
+    align-items: center;
+    .little-head-2 {
+      border: 1px dashed #c4ab7a;
+      width: 95%;
+      height: 95%;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .little-name {
+    font-size: 2rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    color: #c4ab7a;
+    p {
+      width: 100%;
+      font-family: "Italianno";
+    }
+  }
 }
 
 //RWD
@@ -752,6 +822,29 @@ footer img {
   footer {
     margin-top: 5rem;
   }
+  #vtuberName {
+    font-size: 1.7rem;
+  }
+  .vtuberSelect {
+    width: 65%;
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+
+    font-size: 3.7rem;
+    z-index: 20;
+    top: -9%;
+
+    p {
+      cursor: pointer;
+      background-repeat: no-repeat;
+      margin-right: 4%;
+      font-family: "Italianno";
+    }
+    p:hover {
+      background-image: url("/img/vtuberSelect-background.png");
+    }
+  }
 }
 
 @media screen and (max-width: 1680px) {
@@ -782,6 +875,13 @@ footer img {
   footer {
     margin-top: 3rem;
   }
+  #vtuberName {
+    font-size: 1.7rem;
+  }
+  #vtuberSelect {
+    top: -7%;
+    font-size: 2.5rem;
+  }
 }
 
 @media screen and (max-width: 1440px) {
@@ -808,6 +908,13 @@ footer img {
         line-height: 1.5rem;
       }
     }
+  }
+  #vtuberName {
+    font-size: 1.5rem;
+  }
+  #vtuberSelect {
+    top: -6%;
+    font-size: 2rem;
   }
 }
 
@@ -864,9 +971,21 @@ footer img {
       }
     }
   }
+  #vtuberName {
+    font-size: 1.5rem;
+  }
+  #vtuberSelect {
+    top: -5%;
+    font-size: 2rem;
+  }
 }
 @media screen and (max-width: 1280px) {
-  .vtuber-timer {
+  #vtuberName {
+    font-size: 1.4rem;
+  }
+  #vtuberSelect {
+    top: -5%;
+    font-size: 1.7rem;
   }
 }
 @media screen and (max-width: 834px) {
@@ -901,11 +1020,14 @@ footer img {
       }
     }
   }
-  .ibendo-img {
+  .title {
     width: 100%;
-    display: flex;
-    flex-direction: column;
+    margin-top: 1%;
+    img {
+      width: 95%;
+    }
   }
+
   .ibendo {
     width: 100%;
     margin: auto;
@@ -963,6 +1085,17 @@ footer img {
   .vtubercard-background .vtuber-timer {
     left: 6%;
   }
+  #vtuberName {
+    font-size: 1.4rem;
+  }
+  #vtuberSelect {
+    width: 60%;
+    top: -3.3%;
+    font-size: 1.7rem;
+  }
+  .timer {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 414px) {
@@ -986,7 +1119,10 @@ footer img {
   }
   .title {
     width: 100%;
-    margin-top: 25%;
+    margin-top: 20%;
+    img {
+      width: 100%;
+    }
   }
   .ibendo-img {
     width: 130%;
@@ -1038,7 +1174,7 @@ footer img {
       left: 3%;
       top: 0;
       width: 140px;
-      height: 45px;
+      height: 35px;
       background: #fffaf5;
       border: 1px solid #dad7d2;
       box-shadow: 6px 6px 7px rgba(0, 0, 0, 0.4);
@@ -1056,20 +1192,33 @@ footer img {
       > .mark {
         width: 55px;
         top: 40%;
-        left: -5%;
-        height: 8px;
+        left: -3%;
+        height: 13px;
         position: absolute;
         background: #fffaf5;
         border-top: 2px solid #000000;
         transform: rotate(-44.19deg);
         z-index: 1;
+        opacity: 0;
       }
       > .today {
         position: absolute;
-        top: 25%;
+        top: 8%;
         left: 25%;
         font-size: 2rem;
         color: #000000;
+      }
+    }
+    .vtubercard {
+      .card-1 {
+        border-width: 0.1rem 0.1rem 0px 0.1rem;
+        border-style: solid;
+        border-color: #c4ab7a;
+      }
+      .card-1-bottom1 {
+        flex-grow: 1;
+        border: solid #c4ab7a;
+        border-width: 0px 0px 0.1rem 0px;
       }
     }
   }
@@ -1112,7 +1261,12 @@ footer img {
     }
   }
   #vtuberName {
-    font-size: 1px;
+    font-size: 0.8rem;
+  }
+  #vtuberSelect {
+    width: 68%;
+    top: -3.3%;
+    font-size: 1rem;
   }
 }
 @media screen and (max-width: 375px) {
@@ -1144,8 +1298,12 @@ footer img {
   }
   .title {
     width: 100%;
-    margin-top: 15%;
+    margin-top: 20%;
+    img {
+      width: 100%;
+    }
   }
+
   .ibendo-img {
     width: 130%;
     display: flex;
@@ -1159,8 +1317,23 @@ footer img {
   .map img {
     width: 90%;
   }
+  .title {
+    width: 100%;
+    margin-top: 20%;
+    img {
+      width: 100%;
+    }
+  }
   footer {
     margin-top: 1rem;
+  }
+  #vtuberName {
+    font-size: 0.8rem;
+  }
+  #vtuberSelect {
+    width: 68%;
+    top: -2.7%;
+    font-size: 0.9rem;
   }
 }
 
