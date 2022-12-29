@@ -334,12 +334,24 @@ body {
   height: 80rem;
   background-color: #ffffff;
   > .card-1 {
+    position: relative;
     width: 90%;
     height: 80%;
     background-color: #ffffff;
     border-width: 9px 9px 0px 9px;
     border-style: solid;
     border-color: #c4ab7a;
+    .card-2 {
+      position: absolute;
+      left: 1%;
+      top: 1%;
+      width: 98%;
+      height: 95%;
+      background-color: #ffffff;
+      border-width: 2px 2px 2px 2px;
+      border-style: solid;
+      border-color: #c4ab7a;
+    }
   }
   .card-1-bottom {
     position: relative;
