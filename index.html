@@ -72,8 +72,6 @@
 
 <body>
 
-
-
     <div class="roading"></div>
 
     <div
@@ -299,21 +297,93 @@
                             <div class="vtubercard-background">
                                 <div class="vtubercard-background-1">
                                     <div class="vtubercard-background-2">
-                                        <div class="vtubercard-background-3"></div>
+                                        <div class="streamcard-background-4"></div>
+                                        <div
+                                            class="vtubercard-background-3"
+                                            id="idCard"
+                                        >
+                                            <a href="">
+                                                <div
+                                                    class="vtubercard"
+                                                    id="vtubercard"
+                                                >
+
+                                                    <div class="card-1">
+                                                        <div class="card-2">
+                                                            <div
+                                                                class="vtubercard-people"
+                                                                id="vtuberPeople"
+                                                            >
+
+                                                                <img
+                                                                    src="/img/people/Toukarin.png"
+                                                                    alt=""
+                                                                >
+
+                                                            </div>
+                                                            <div class="card-mark1">
+                                                                <div class="mark"></div>
+                                                            </div>
+                                                            <div class="card-mark2">
+                                                                <div class="mark"></div>
+                                                            </div>
+                                                            <div class="card-mark3">
+                                                                <div class="mark"></div>
+                                                            </div>
+                                                            <div class="card-mark4">
+                                                                <div class="mark"></div>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="card-1-bottom">
+                                                        <div class="card-1-bottom1">
+                                                            <div class="ten-1"></div>
+                                                        </div>
+                                                        <div
+                                                            class="card-1-bottom2"
+                                                            id="vtuberName"
+                                                        >
+                                                            <p>烏瑪咪x搽米</p>
+                                                        </div>
+                                                        <div class="card-1-bottom3">
+                                                            <div class="ten-2"></div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div
+                                                        class="vtubercard-time"
+                                                        id="vtuberTime"
+                                                    >
+                                                        <p>19:00-20:00</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="vtuber-timer">
-                                    <p class="day">07</p>
+                                    <p
+                                        class="day"
+                                        id="streamDay"
+                                    >07</p>
                                     <div class="mark"></div>
-                                    <p class="today">當日</p>
+                                    <p
+                                        class="today"
+                                        id="streamToday"
+                                    >當日</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="streamcard-background-4"></div>
+
                     </div>
                 </div>
-                <div class="timer">
-                    <p>時刻表</p>
+                <div
+                    class="timer"
+                    id="streamMonth"
+                >
+                    <p>一月</p>
                 </div>
 
 
@@ -367,35 +437,7 @@
         >
     </div>
     </div>
-    <div class="vtubercard">
-        <div class="card-1">
-            <div class="card-2">
-                <div class="card-mark">
-                </div>
-                <div class="card-mark">
-                </div>
-                <div class="card-mark">
-                </div>
-                <div class="card-mark">
-                </div>
-            </div>
-        </div>
-        <div class="card-1-bottom">
-            <div class="card-1-bottom1">
-                <div class="ten-1"></div>
-            </div>
-            <div class="card-1-bottom2">
-                <p>冬華凜</p>
-            </div>
-            <div class="card-1-bottom3">
-                <div class="ten-2"></div>
-            </div>
-        </div>
 
-        <div class="vtubercard-time">
-            <p>19:00-20:00</p>
-        </div>
-    </div>
 
 
 
@@ -415,7 +457,7 @@
 
 
 </body>
-
+<script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
 <script src="/js/app.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>

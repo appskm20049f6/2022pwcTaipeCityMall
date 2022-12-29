@@ -189,14 +189,14 @@ body {
 }
 .streamcard {
   position: relative;
-  height: 80rem;
+  height: 120rem;
   width: 100%;
   z-index: 0;
   margin-bottom: 10%;
   > .streamcard-background-1 {
     position: absolute;
     top: 1%;
-    height: 95%;
+    height: 80%;
     width: 100%;
     border: 2px solid #a4a4a4;
     z-index: 1;
@@ -253,38 +253,47 @@ body {
 
 .vtubercard-background {
   position: relative;
-  left: 5%;
-  top: 10%;
+  left: 3%;
+  top: 1%;
   width: 90%;
-  height: 90%;
+  height: 95%;
   > .vtubercard-background-1 {
     position: absolute;
     top: 6%;
     left: 3%;
     width: 95%;
-    height: 91%;
+    height: 95%;
     border: 1px dashed #9b8f72;
     > .vtubercard-background-2 {
       position: absolute;
       top: 0.5%;
       left: 1%;
       width: 98%;
-      height: 94%;
+      height: 100%;
       border: 1px solid #9b8f72;
       > .vtubercard-background-3 {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
         position: absolute;
+        justify-content: center;
+        align-items: center;
         left: 1%;
         top: 1%;
         width: 98%;
         height: 98%;
         border: 6px solid #9b8f72;
+        > a {
+          margin-right: 4%;
+          text-decoration: none;
+        }
       }
     }
   }
   .vtuber-timer {
     position: absolute;
     z-index: 5;
-    left: 1.5%;
+    left: 3%;
     top: 3%;
     width: 70px;
     height: 150px;
@@ -324,24 +333,24 @@ body {
 }
 
 .vtubercard {
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   left: 10%;
-  width: 40rem;
-  height: 80rem;
+  width: 20rem;
+  height: 40rem;
   background-color: #ffffff;
   > .card-1 {
     position: relative;
     width: 90%;
     height: 80%;
     background-color: #ffffff;
-    border-width: 9px 9px 0px 9px;
+    border-width: 0.3rem 0.3rem 0px 0.3rem;
     border-style: solid;
     border-color: #c4ab7a;
     .card-2 {
+      display: flex;
       position: absolute;
       left: 1%;
       top: 1%;
@@ -351,6 +360,97 @@ body {
       border-width: 2px 2px 2px 2px;
       border-style: solid;
       border-color: #c4ab7a;
+      .card-mark1 {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: 3;
+        width: 1rem;
+        height: 1rem;
+        border-width: 2px 2px 0px 0px;
+        border-color: #c4ab7a;
+        border-style: solid;
+        > .mark {
+          position: absolute;
+          width: 1rem;
+          height: 1rem;
+          border-width: 0px 0px 2px 2px;
+          border-color: rgb(255, 255, 255);
+          border-style: solid;
+          z-index: 5;
+          left: -2px;
+          background-color: #ffffff;
+        }
+      }
+      .card-mark2 {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 3;
+        width: 1rem;
+        height: 1rem;
+        border-width: 0px 2px 2px 0px;
+        border-color: #c4ab7a;
+        border-style: solid;
+        > .mark {
+          position: absolute;
+          width: 1rem;
+          height: 1rem;
+          border-width: 2px 0px 0px 2px;
+          border-color: rgb(255, 255, 255);
+          border-style: solid;
+          z-index: 5;
+          top: -2px;
+          left: -2px;
+          background-color: #ffffff;
+        }
+      }
+      .card-mark3 {
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 3;
+        width: 1rem;
+        height: 1rem;
+        border-width: 0px 0px 2px 2px;
+        border-color: #c4ab7a;
+        border-style: solid;
+        > .mark {
+          position: absolute;
+          width: 1rem;
+          height: 1rem;
+          border-width: 2px 2px 0px 0px;
+          border-color: rgb(255, 255, 255);
+          border-style: solid;
+          z-index: 5;
+          top: -2px;
+          right: -2px;
+          background-color: #ffffff;
+        }
+      }
+      .card-mark4 {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: 3;
+        width: 1rem;
+        height: 1rem;
+        border-width: 2px 0px 0px 2px;
+        border-color: #c4ab7a;
+        border-style: solid;
+        > .mark {
+          position: absolute;
+          width: 1rem;
+          height: 1rem;
+          border-width: 0px 2px 2px 0px;
+          border-color: rgb(255, 255, 255);
+          border-style: solid;
+          background-color: #ffffff;
+          z-index: 5;
+          bottom: -2px;
+          right: -2px;
+        }
+      }
     }
   }
   .card-1-bottom {
@@ -358,14 +458,14 @@ body {
     display: flex;
     width: 90%;
     > .card-1-bottom1 {
-      width: 30%;
+      flex-grow: 1;
       border: solid #c4ab7a;
-      border-width: 0px 0px 9px 0px;
+      border-width: 0px 0px 0.3rem 0px;
     }
     > .card-1-bottom2 {
-      width: 40%;
+      flex-grow: 5;
       font-weight: 155;
-      font-size: 60px;
+      font-size: 1.3rem;
       display: flex;
       align-items: center;
 
@@ -378,25 +478,25 @@ body {
       }
     }
     > .card-1-bottom3 {
-      width: 30%;
+      flex-grow: 1;
       background-color: #c4ab7a;
     }
     .ten-1 {
       position: absolute;
-      width: 1.7rem;
-      height: 1.7rem;
-      left: 28%;
-      top: -0.6rem;
+      width: 0.5rem;
+      height: 0.5rem;
+      left: 14%;
+      top: -0.2rem;
       background-color: #c4ab7a;
       z-index: 5;
       transform: rotate(-45deg);
     }
     .ten-2 {
       position: absolute;
-      width: 1.7rem;
-      height: 1.7rem;
-      right: 28%;
-      top: -0.6rem;
+      width: 0.5rem;
+      height: 0.5rem;
+      right: 14%;
+      top: -0.2rem;
       background-color: #c4ab7a;
       z-index: 5;
       transform: rotate(-45deg);
@@ -414,6 +514,17 @@ body {
       display: flex;
       align-items: center;
       color: #c4ab7a;
+    }
+  }
+  .vtubercard-people {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    > img {
+      width: 100%;
+      height: 100%;
     }
   }
 }
@@ -578,6 +689,10 @@ footer img {
     }
   }
 }
+.ibendo-2 {
+  width: 80%;
+  display: flex;
+}
 
 //RWD
 @media screen and (max-width: 1920px) {
@@ -605,6 +720,35 @@ footer img {
       }
     }
   }
+  .streamcard {
+    position: relative;
+    height: 100rem;
+    width: 100%;
+    z-index: 0;
+    margin-bottom: 10%;
+  }
+  .streamcard-background-1 {
+    position: absolute;
+    top: 1%;
+    height: 100%;
+    width: 100%;
+    border: 2px solid #a4a4a4;
+    z-index: 1;
+  }
+  .vtubercard-background {
+    position: relative;
+    left: 5%;
+    top: 1%;
+    width: 90%;
+    height: 90%;
+  }
+  .vtubercard {
+    left: 10%;
+    width: 15rem;
+    height: 30rem;
+    background-color: #ffffff;
+  }
+
   footer {
     margin-top: 5rem;
   }
@@ -667,9 +811,37 @@ footer img {
   }
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1366px) {
   .top-logo img {
     width: 55%;
+  }
+  .streamcard {
+    position: relative;
+    height: 100rem;
+    width: 100%;
+    z-index: 0;
+    margin-bottom: 10%;
+  }
+  .streamcard-background-1 {
+    position: absolute;
+    top: 1%;
+    height: 100%;
+    width: 100%;
+    border: 2px solid #a4a4a4;
+    z-index: 1;
+  }
+  .vtubercard-background {
+    position: relative;
+    left: 5%;
+    top: 1%;
+    width: 90%;
+    height: 90%;
+  }
+  .vtubercard {
+    left: 10%;
+    width: 13rem;
+    height: 26rem;
+    background-color: #ffffff;
   }
   .navbar {
     .card {
@@ -693,7 +865,10 @@ footer img {
     }
   }
 }
-
+@media screen and (max-width: 1280px) {
+  .vtuber-timer {
+  }
+}
 @media screen and (max-width: 834px) {
   .top-logo {
     width: 100%;
@@ -756,6 +931,38 @@ footer img {
     width: 60px;
     height: 100%;
   }
+
+  .streamcard {
+    position: relative;
+    height: 130rem;
+    width: 100%;
+    z-index: 0;
+    margin-bottom: 10%;
+  }
+  .streamcard-background-1 {
+    position: absolute;
+    top: 1%;
+    height: 100%;
+    width: 100%;
+    border: 2px solid #a4a4a4;
+    z-index: 1;
+  }
+  .vtubercard-background {
+    position: relative;
+    left: 5%;
+    top: 1%;
+    width: 90%;
+    height: 90%;
+  }
+  .vtubercard {
+    left: 10%;
+    width: 13rem;
+    height: 26rem;
+    background-color: #ffffff;
+  }
+  .vtubercard-background .vtuber-timer {
+    left: 6%;
+  }
 }
 
 @media screen and (max-width: 414px) {
@@ -815,8 +1022,107 @@ footer img {
     width: 30px;
     height: 100%;
   }
-}
 
+  .streamcard {
+    position: relative;
+    height: 80rem;
+    width: 100%;
+    z-index: 0;
+    margin-bottom: 10%;
+    > .timer {
+      display: none;
+    }
+    .vtuber-timer {
+      position: absolute;
+      z-index: 5;
+      left: 3%;
+      top: 0;
+      width: 140px;
+      height: 45px;
+      background: #fffaf5;
+      border: 1px solid #dad7d2;
+      box-shadow: 6px 6px 7px rgba(0, 0, 0, 0.4);
+      > .day {
+        position: absolute;
+        top: -70%;
+        left: -20%;
+        font-family: "Inria Serif";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 55px;
+        color: #000000;
+        z-index: 1;
+      }
+      > .mark {
+        width: 55px;
+        top: 40%;
+        left: -5%;
+        height: 8px;
+        position: absolute;
+        background: #fffaf5;
+        border-top: 2px solid #000000;
+        transform: rotate(-44.19deg);
+        z-index: 1;
+      }
+      > .today {
+        position: absolute;
+        top: 25%;
+        left: 25%;
+        font-size: 2rem;
+        color: #000000;
+      }
+    }
+  }
+  .streamcard-background-1 {
+    position: absolute;
+    top: 1%;
+    height: 50%;
+    width: 100%;
+    border: 2px solid #a4a4a4;
+    z-index: 1;
+  }
+  .vtubercard-background {
+    position: relative;
+    left: 3%;
+    top: 1%;
+    width: 90%;
+    height: 90%;
+  }
+  .vtubercard {
+    left: 10%;
+    width: 8rem;
+    height: 16rem;
+    background-color: #ffffff;
+  }
+  .vtubercard-background .vtuber-timer {
+    left: 6%;
+  }
+  .vtubercard .vtubercard-time {
+    position: relative;
+    top: 2.5%;
+    font-size: 30px;
+    > p {
+      font-family: "Italianno";
+      font-style: normal;
+      font-weight: 400;
+      line-height: 30px;
+      display: flex;
+      align-items: center;
+      color: #c4ab7a;
+    }
+  }
+  #vtuberName {
+    font-size: 1px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .vtubercard {
+    left: 10%;
+    width: 7rem;
+    height: 14rem;
+    background-color: #ffffff;
+  }
+}
 @media screen and (max-width: 360px) {
   body {
     background-position: center -30px;

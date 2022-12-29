@@ -64,3 +64,88 @@ let ibendoChange = (c) => {
     navbar.children[3].children[0].classList.add("card-change");
   }
 };
+
+// 時刻表切換
+let streamMonth = document.querySelector("#streamMonth");
+let streamToday = document.querySelector("#streamToday");
+let streamDay = document.querySelector("#streamDay");
+let vtuberTime = document.querySelector("#vtuberTime");
+let vtuberName = document.querySelector("#vtuberName");
+let vtuberPeople = document.querySelector("#vtuberPeople");
+let vtubercard = document.querySelector("#vtubercard");
+let idCard = document.querySelector("#idCard");
+
+let today = new Date();
+let month = today.getMonth() + 1;
+let kyo = today.getDate();
+
+axios.get("/json/data.json").then(function (response) {
+  //確認今天幾個人直播並劃出卡
+  let vtuberArr = [];
+  for (let index = 0; index < 58; index++) {
+    if (response.data[index].date == 7) {
+      vtuberArr.push(response.data[index]);
+    }
+  }
+
+  for (let index = 0; index < vtuberArr.length; index++) {
+    idCard.innerHTML += `<a href="${vtuberArr[index].url}">
+    <div
+        class="vtubercard"
+        id="vtubercard"
+    >
+
+        <div class="card-1">
+            <div class="card-2">
+                <div
+                    class="vtubercard-people"
+                    id="vtuberPeople"
+                >
+                
+                    <img
+                        src=${vtuberArr[index].img}
+                    >
+
+                </div>
+                <div class="card-mark1">
+                    <div class="mark"></div>
+                </div>
+                <div class="card-mark2">
+                    <div class="mark"></div>
+                </div>
+                <div class="card-mark3">
+                    <div class="mark"></div>
+                </div>
+                <div class="card-mark4">
+                    <div class="mark"></div>
+                </div>
+            </div>
+
+        </div>
+        <div class="card-1-bottom">
+            <div class="card-1-bottom1">
+                <div class="ten-1"></div>
+            </div>
+            <div
+                class="card-1-bottom2"
+                id="vtuberName"
+            >
+                <p>${vtuberArr[index].name}</p>
+            </div>
+            <div class="card-1-bottom3">
+                <div class="ten-2"></div>
+            </div>
+        </div>
+
+        <div
+            class="vtubercard-time"
+            id="vtuberTime"
+        >
+            <p>${vtuberArr[index].time}</p>
+        </div>
+    </div>
+</a>`;
+  }
+  console.log(vtuberArr);
+  console.log(response.data);
+});
