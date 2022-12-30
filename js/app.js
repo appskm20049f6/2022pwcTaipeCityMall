@@ -9,7 +9,7 @@ let title = document.querySelector("#title");
 
 let ibendoChange = (c) => {
   if (c == 1) {
-    title.innerHTML = `<img src="../img/index-title.png" alt="" data-aos="fade-down">`;
+    title.innerHTML = `<img src="./img/index-title.png" alt="" data-aos="fade-down">`;
 
     navbar.children[0].children[0].children[4].children[0].innerHTML =
       "<p>現在</p>";
