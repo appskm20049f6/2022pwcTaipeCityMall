@@ -32,6 +32,120 @@ body {
   background-position: center top;
 }
 
+.hamber {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 8%;
+  height: 35%;
+  position: fixed;
+  bottom: 0;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.hamber a {
+  text-decoration: none;
+  color: #565656;
+  font-size: 2rem;
+}
+.hamber .linnkerbg {
+  display: none;
+  margin: auto;
+  height: 70%;
+  width: 95%;
+  background-color: #ccc7b5;
+}
+.hamber .linnker {
+  margin: auto;
+  margin-top: 3%;
+  height: 95%;
+  width: 95%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #ccc7b5;
+  gap: 5%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: #a3a08a solid 3px;
+}
+.hamber .linnker a {
+  margin-left: 8%;
+}
+.hamber .taggerbg {
+  display: none;
+  margin: auto;
+  height: 25%;
+  width: 95%;
+  margin-top: 5%;
+}
+.hamber .tagger {
+  margin: auto;
+  height: 95%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #ccc7b5;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+.hamber .tagger .open {
+  height: 95%;
+  width: 95%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #f6f5ef;
+  gap: 5%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: #a3a08a solid 3px;
+  margin: auto;
+}
+.hamber .tagger .open a {
+  margin-left: 8%;
+}
+.hamber .close {
+  height: 2vw;
+  width: 2vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #ccc7b5;
+  border: #a3a08a solid 3px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.hamber .close a {
+  text-decoration: none;
+  color: #565656;
+  font-family: "Italianno";
+  font-size: 2rem;
+  margin: auto;
+}
+
 .page-1 {
   width: 100%;
 }
@@ -894,6 +1008,7 @@ footer img {
 }
 .vtuberSelect p:hover {
   background-image: url("/img/vtuberSelect-background.png");
+  background-size: contain;
 }
 
 #streamDay p {
@@ -949,6 +1064,115 @@ footer img {
 }
 
 @media screen and (max-width: 1920px) {
+  .hamber {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 8%;
+    height: 35%;
+    position: fixed;
+    bottom: 0;
+  }
+  .hamber a {
+    text-decoration: none;
+    color: #565656;
+    font-family: "Italianno";
+    font-size: 1.5rem;
+  }
+  .hamber .linnkerbg {
+    margin: auto;
+    height: 70%;
+    width: 95%;
+    background-color: #ccc7b5;
+  }
+  .hamber .linnker {
+    margin: auto;
+    margin-top: 3%;
+    height: 95%;
+    width: 95%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: #ccc7b5;
+    gap: 5%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    border: #a3a08a solid 3px;
+  }
+  .hamber .linnker a {
+    margin-left: 8%;
+  }
+  .hamber .taggerbg {
+    margin: auto;
+    height: 25%;
+    width: 95%;
+    margin-top: 5%;
+  }
+  .hamber .tagger {
+    margin: auto;
+    height: 95%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: #ccc7b5;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  .hamber .tagger .open {
+    height: 95%;
+    width: 95%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: #f6f5ef;
+    gap: 5%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    border: #a3a08a solid 3px;
+    margin: auto;
+  }
+  .hamber .tagger .open a {
+    margin-left: 8%;
+  }
+  .hamber .close {
+    height: 2vw;
+    width: 2vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: #ccc7b5;
+    border: #a3a08a solid 3px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .hamber .close a {
+    text-decoration: none;
+    color: #565656;
+    font-family: "Italianno";
+    font-size: 2rem;
+    margin: auto;
+  }
   .top-logo img {
     width: 55%;
   }
@@ -1028,6 +1252,15 @@ footer img {
   }
 }
 @media screen and (max-width: 1680px) {
+  .hamber .close {
+    height: 3vw;
+    width: 3vw;
+  }
+  .hamber a {
+    text-decoration: none;
+    color: #565656;
+    font-size: 1.3rem;
+  }
   .top-logo img {
     width: 55%;
   }
@@ -1062,6 +1295,14 @@ footer img {
   }
 }
 @media screen and (max-width: 1440px) {
+  .hamber a {
+    text-decoration: none;
+    color: #565656;
+    font-size: 1.1rem;
+  }
+  .hamber .close a {
+    font-size: 1.5rem;
+  }
   .top-logo img {
     width: 55%;
   }
@@ -1093,6 +1334,14 @@ footer img {
   }
 }
 @media screen and (max-width: 1366px) {
+  .hamber a {
+    text-decoration: none;
+    color: #565656;
+    font-size: 1rem;
+  }
+  .hamber .close a {
+    font-size: 1.5rem;
+  }
   .top-logo img {
     width: 55%;
   }
@@ -1152,6 +1401,14 @@ footer img {
   }
 }
 @media screen and (max-width: 1280px) {
+  .hamber a {
+    text-decoration: none;
+    color: #565656;
+    font-size: 0.9rem;
+  }
+  .hamber .close a {
+    font-size: 1.5rem;
+  }
   #vtuberName {
     font-size: 1.4rem;
   }
@@ -1161,6 +1418,31 @@ footer img {
   }
 }
 @media screen and (max-width: 834px) {
+  .hamber {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 14%;
+    height: 25%;
+    position: fixed;
+    bottom: 0;
+  }
+  .hamber a {
+    text-decoration: none;
+    color: #565656;
+    font-size: 1rem;
+  }
+  .hamber .close {
+    height: 5vw;
+    width: 5vw;
+  }
+  .hamber .close a {
+    font-size: 2rem;
+  }
   .top-logo {
     width: 100%;
     display: -webkit-box;
@@ -1274,6 +1556,31 @@ footer img {
   }
 }
 @media screen and (max-width: 414px) {
+  .hamber {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 30%;
+    height: 40%;
+    position: fixed;
+    bottom: 0;
+  }
+  .hamber a {
+    text-decoration: none;
+    color: #565656;
+    font-size: 1rem;
+  }
+  .hamber .close {
+    height: 10vw;
+    width: 10vw;
+  }
+  .hamber .close a {
+    font-size: 2rem;
+  }
   body {
     background-position: center -30px;
   }
@@ -1458,6 +1765,9 @@ footer img {
     width: 68%;
     top: -3.3%;
     font-size: 1rem;
+  }
+  .footerlinks {
+    display: none;
   }
 }
 @media screen and (max-width: 375px) {

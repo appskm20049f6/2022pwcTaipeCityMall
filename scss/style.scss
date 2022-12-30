@@ -33,6 +33,90 @@ body {
   background-size: cover;
   background-position: center top;
 }
+.hamber {
+  a {
+    text-decoration: none;
+    color: #565656;
+    font-size: 2rem;
+  }
+  display: flex;
+  flex-direction: column;
+  width: 8%;
+  height: 35%;
+  position: fixed;
+
+  bottom: 0;
+  justify-content: flex-end;
+  .linnkerbg {
+    display: none;
+    margin: auto;
+    height: 70%;
+    width: 95%;
+    background-color: #ccc7b5;
+  }
+  .linnker {
+    margin: auto;
+    margin-top: 3%;
+    height: 95%;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    background-color: #ccc7b5;
+    gap: 5%;
+    justify-content: center;
+    border: #a3a08a solid 3px;
+
+    a {
+      margin-left: 8%;
+    }
+  }
+  .taggerbg {
+    display: none;
+    margin: auto;
+    height: 25%;
+    width: 95%;
+    margin-top: 5%;
+  }
+  .tagger {
+    margin: auto;
+    height: 95%;
+    width: 100%;
+    display: flex;
+    background-color: #ccc7b5;
+    align-items: flex-end;
+
+    .open {
+      height: 95%;
+      width: 95%;
+      display: flex;
+      flex-direction: column;
+      background-color: #f6f5ef;
+      gap: 5%;
+      justify-content: center;
+      border: #a3a08a solid 3px;
+      margin: auto;
+      a {
+        margin-left: 8%;
+      }
+    }
+  }
+  .close {
+    height: 2vw;
+    width: 2vw;
+    display: flex;
+    flex-direction: column;
+    background-color: #ccc7b5;
+    border: #a3a08a solid 3px;
+    justify-content: center;
+    a {
+      text-decoration: none;
+      color: #565656;
+      font-family: "Italianno";
+      font-size: 2rem;
+      margin: auto;
+    }
+  }
+}
 
 .page-1 {
   width: 100%;
@@ -765,6 +849,7 @@ footer img {
   }
   p:hover {
     background-image: url("/img/vtuberSelect-background.png");
+    background-size: contain;
   }
 }
 #streamDay {
@@ -810,6 +895,88 @@ footer img {
 
 //RWD
 @media screen and (max-width: 1920px) {
+  .hamber {
+    a {
+      text-decoration: none;
+      color: #565656;
+      font-family: "Italianno";
+      font-size: 1.5rem;
+    }
+    display: flex;
+    flex-direction: column;
+    width: 8%;
+    height: 35%;
+    position: fixed;
+
+    bottom: 0;
+    .linnkerbg {
+      margin: auto;
+      height: 70%;
+      width: 95%;
+      background-color: #ccc7b5;
+    }
+    .linnker {
+      margin: auto;
+      margin-top: 3%;
+      height: 95%;
+      width: 95%;
+      display: flex;
+      flex-direction: column;
+      background-color: #ccc7b5;
+      gap: 5%;
+      justify-content: center;
+      border: #a3a08a solid 3px;
+
+      a {
+        margin-left: 8%;
+      }
+    }
+    .taggerbg {
+      margin: auto;
+      height: 25%;
+      width: 95%;
+      margin-top: 5%;
+    }
+    .tagger {
+      margin: auto;
+      height: 95%;
+      width: 100%;
+      display: flex;
+      background-color: #ccc7b5;
+      align-items: flex-end;
+
+      .open {
+        height: 95%;
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        background-color: #f6f5ef;
+        gap: 5%;
+        justify-content: center;
+        border: #a3a08a solid 3px;
+        margin: auto;
+        a {
+          margin-left: 8%;
+        }
+      }
+    }
+    .close {
+      height: 2vw;
+      width: 2vw;
+      display: flex;
+      flex-direction: column;
+      background-color: #ccc7b5;
+      border: #a3a08a solid 3px;
+      justify-content: center;
+      a {
+        text-decoration: none;
+        color: #565656;
+        font-family: "Italianno";
+        font-size: 2rem;
+        margin: auto;
+      }
+    }
+  }
   .top-logo img {
     width: 55%;
   }
@@ -892,6 +1059,17 @@ footer img {
 }
 
 @media screen and (max-width: 1680px) {
+  .hamber {
+    .close {
+      height: 3vw;
+      width: 3vw;
+    }
+    a {
+      text-decoration: none;
+      color: #565656;
+      font-size: 1.3rem;
+    }
+  }
   .top-logo img {
     width: 55%;
   }
@@ -929,6 +1107,19 @@ footer img {
 }
 
 @media screen and (max-width: 1440px) {
+  .hamber {
+    a {
+      text-decoration: none;
+      color: #565656;
+      font-size: 1.1rem;
+    }
+    .close {
+      a {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
   .top-logo img {
     width: 55%;
   }
@@ -963,6 +1154,18 @@ footer img {
 }
 
 @media screen and (max-width: 1366px) {
+  .hamber {
+    a {
+      text-decoration: none;
+      color: #565656;
+      font-size: 1rem;
+    }
+    .close {
+      a {
+        font-size: 1.5rem;
+      }
+    }
+  }
   .top-logo img {
     width: 55%;
   }
@@ -1024,6 +1227,19 @@ footer img {
   }
 }
 @media screen and (max-width: 1280px) {
+  .hamber {
+    a {
+      text-decoration: none;
+      color: #565656;
+
+      font-size: 0.9rem;
+    }
+    .close {
+      a {
+        font-size: 1.5rem;
+      }
+    }
+  }
   #vtuberName {
     font-size: 1.4rem;
   }
@@ -1033,6 +1249,28 @@ footer img {
   }
 }
 @media screen and (max-width: 834px) {
+  .hamber {
+    a {
+      text-decoration: none;
+      color: #565656;
+
+      font-size: 1rem;
+    }
+    .close {
+      height: 5vw;
+      width: 5vw;
+      a {
+        font-size: 2rem;
+      }
+    }
+    display: flex;
+    flex-direction: column;
+    width: 14%;
+    height: 25%;
+    position: fixed;
+
+    bottom: 0;
+  }
   .top-logo {
     width: 100%;
     display: flex;
@@ -1143,6 +1381,28 @@ footer img {
 }
 
 @media screen and (max-width: 414px) {
+  .hamber {
+    a {
+      text-decoration: none;
+      color: #565656;
+
+      font-size: 1rem;
+    }
+    .close {
+      height: 10vw;
+      width: 10vw;
+      a {
+        font-size: 2rem;
+      }
+    }
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 40%;
+    position: fixed;
+
+    bottom: 0;
+  }
   body {
     background-position: center -30px;
   }
@@ -1311,6 +1571,9 @@ footer img {
     width: 68%;
     top: -3.3%;
     font-size: 1rem;
+  }
+  .footerlinks {
+    display: none;
   }
 }
 @media screen and (max-width: 375px) {

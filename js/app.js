@@ -156,7 +156,22 @@ let changeDate = (day) => {
       streamMonth.innerHTML = `<p>${vtuberArr[index].month}月</p>`;
       streamDay.innerHTML = `<p>${vtuberArr[index].date}</p>`;
     }
-    console.log(response.data);
-    console.log(vtuberArr);
   });
+};
+
+//漢堡開關
+let clos = document.querySelector("#clos");
+let taggerbg = document.querySelector("#taggerbg");
+let linnkerbg = document.querySelector("#linnkerbg");
+
+let hamber = (e) => {
+  if (e == 1) {
+    linnkerbg.style.display = "none";
+    taggerbg.style.display = "none";
+    clos.innerHTML = `<a href="javascript:hamber(2);">🎵</a>`;
+  } else {
+    linnkerbg.style.display = "block";
+    taggerbg.style.display = "block";
+    clos.innerHTML = `<a href="javascript:hamber(1);">🎵</a>`;
+  }
 };
