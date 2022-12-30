@@ -322,9 +322,6 @@ body {
   margin-top: 1%;
   text-decoration: none;
 }
-.vtubercard-background > .vtubercard-background-1 > .vtubercard-background-2 > .vtubercard-background-3 .sixup {
-  margin-right: 3%;
-}
 .vtubercard-background .vtuber-timer {
   position: absolute;
   z-index: 5;
@@ -778,9 +775,7 @@ footer img {
 
 .ibendo-2 {
   width: 80%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;

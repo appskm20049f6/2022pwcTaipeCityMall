@@ -288,9 +288,6 @@ body {
           margin-top: 1%;
           text-decoration: none;
         }
-        .sixup {
-          margin-right: 3%;
-        }
       }
     }
   }
@@ -698,7 +695,7 @@ footer img {
 }
 .ibendo-2 {
   width: 80%;
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
 }

@@ -88,30 +88,15 @@ let changeDate = (day) => {
     idCard.innerHTML = "";
     //確認今天幾個人直播並劃出卡
     let vtuberArr = [];
-    if (day == 0) {
-      streamcard.style.display = "none";
-      for (let index = 0; index < 58; index++) {
-        idCardLittle.innerHTML += `<div class="littlecard">
-        <div class="little-head-1">
-            <div class="little-head-2">
-                <img src="${response.data[index].img}">
-            </div>
-        </div>
-        <div class="little-name">
-            <p>${response.data[index].name}</p>
-        </div>
-    </div>`;
-      }
-    } else {
-      streamcard.style.display = "block";
-      for (let index = 0; index < 58; index++) {
-        if (response.data[index].date == day) {
-          vtuberArr.push(response.data[index]);
-        }
-      }
 
-      for (let index = 0; index < vtuberArr.length; index++) {
-        idCard.innerHTML += `<a href="${vtuberArr[index].url}" class="sixup">
+    for (let index = 0; index < 76; index++) {
+      if (response.data[index].date == day) {
+        vtuberArr.push(response.data[index]);
+      }
+    }
+
+    for (let index = 0; index < vtuberArr.length; index++) {
+      idCard.innerHTML += `<a href="${vtuberArr[index].url}" class="sixup">
   <div
       class="vtubercard"
       id="vtubercard"
@@ -167,10 +152,9 @@ let changeDate = (day) => {
       </div>
   </div>
 </a>`;
-        //修改今天日期
-        streamMonth.innerHTML = `<p>${vtuberArr[index].month}月</p>`;
-        streamDay.innerHTML = `<p>${vtuberArr[index].date}</p>`;
-      }
+      //修改今天日期
+      streamMonth.innerHTML = `<p>${vtuberArr[index].month}月</p>`;
+      streamDay.innerHTML = `<p>${vtuberArr[index].date}</p>`;
     }
     console.log(response.data);
     console.log(vtuberArr);
