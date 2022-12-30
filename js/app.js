@@ -84,7 +84,7 @@ let month = today.getMonth() + 1;
 let kyo = today.getDate();
 
 let changeDate = (day) => {
-  axios.get("/json/data.json").then(function (response) {
+  axios.get("./json/data.json").then(function (response) {
     idCard.innerHTML = "";
     //確認今天幾個人直播並劃出卡
     let vtuberArr = [];
