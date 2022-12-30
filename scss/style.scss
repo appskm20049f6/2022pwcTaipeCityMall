@@ -1,15 +1,15 @@
 //字體
 @font-face {
   font-family: "GenSenRounded";
-  src: url("/fonts/GenSenRoundedJP-L-02.ttf") format("truetype");
+  src: url("../fonts/GenSenRoundedJP-L-02.ttf") format("truetype");
 }
 @font-face {
   font-family: "Inria Serif";
-  src: url("/fonts/InriaSerif-Regular.ttf") format("truetype");
+  src: url("../fonts/InriaSerif-Regular.ttf") format("truetype");
 }
 @font-face {
   font-family: "Italianno";
-  src: url("/fonts/Italianno-Regular.ttf") format("truetype");
+  src: url("../fonts/Italianno-Regular.ttf") format("truetype");
 }
 
 //字體
@@ -28,7 +28,7 @@ body {
   width: 99vw;
   height: 100vh;
   background-color: #e9e9e9;
-  background-image: url("/img/index-backgrond-1.png");
+  background-image: url("../img/index-backgrond-1.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center top;
@@ -181,14 +181,14 @@ body {
   .card1 {
     > .card-backgrond {
       .game-card {
-        background-image: url("/img/navcard-1.png");
+        background-image: url("../img/navcard-1.png");
       }
     }
   }
   .card2 {
     > .card-backgrond {
       .game-card {
-        background-image: url("/img/navcard-2.png");
+        background-image: url("../img/navcard-2.png");
       }
     }
     > .cardtop1 {
@@ -201,7 +201,7 @@ body {
   .card3 {
     > .card-backgrond {
       .game-card {
-        background-image: url("/img/navcard-3.png");
+        background-image: url("../img/navcard-3.png");
       }
     }
     > .cardtop1 {
@@ -214,7 +214,7 @@ body {
   .card4 {
     > .card-backgrond {
       .game-card {
-        background-image: url("/img/navcard-4.png");
+        background-image: url("../img/navcard-4.png");
       }
     }
     > .cardtop1 {
@@ -227,7 +227,7 @@ body {
   .card5 {
     > .card-backgrond {
       .game-card {
-        background-image: url("/img/navcard-5.png");
+        background-image: url("../img/navcard-5.png");
       }
     }
   }
@@ -288,7 +288,7 @@ body {
       position: absolute;
       top: 1%;
       left: 2%;
-      height: 95%;
+      height: 100%;
       width: 96%;
       z-index: 2;
       background-color: #c4ab7a;
@@ -621,7 +621,7 @@ body {
   width: 100%;
   display: flex;
   margin: auto;
-  margin-top: -3%;
+  margin-top: 1%;
   justify-content: center;
 }
 .map img {
@@ -712,7 +712,7 @@ footer img {
       width: 100%;
       height: 88%;
       background-size: cover;
-      background-image: url("/img/card-backgrond.png");
+      background-image: url("../img/card-backgrond.png");
       background-position: center;
       background-repeat: no-repeat;
     }
@@ -848,7 +848,7 @@ footer img {
     font-family: "Italianno";
   }
   p:hover {
-    background-image: url("/img/vtuberSelect-background.png");
+    background-image: url("../img/vtuberSelect-background.png");
     background-size: contain;
   }
 }
@@ -1053,12 +1053,19 @@ footer img {
       font-family: "Italianno";
     }
     p:hover {
-      background-image: url("/img/vtuberSelect-background.png");
+      background-image: url("../img/vtuberSelect-background.png");
     }
   }
 }
 
 @media screen and (max-width: 1680px) {
+  .streamcard {
+    position: relative;
+    height: 120rem;
+    width: 100%;
+    z-index: 0;
+    margin-bottom: 10%;
+  }
   .hamber {
     .close {
       height: 3vw;
@@ -1171,7 +1178,7 @@ footer img {
   }
   .streamcard {
     position: relative;
-    height: 100rem;
+    height: 110rem;
     width: 100%;
     z-index: 0;
     margin-bottom: 10%;
@@ -1338,7 +1345,7 @@ footer img {
 
   .streamcard {
     position: relative;
-    height: 130rem;
+    height: 145rem;
     width: 100%;
     z-index: 0;
     margin-bottom: 10%;
@@ -1465,7 +1472,7 @@ footer img {
 
   .streamcard {
     position: relative;
-    height: 80rem;
+    height: 90rem;
     width: 100%;
     z-index: 0;
     margin-bottom: 10%;
@@ -1582,6 +1589,13 @@ footer img {
     width: 7rem;
     height: 14rem;
     background-color: #ffffff;
+  }
+  .streamcard {
+    position: relative;
+    height: 75rem;
+    width: 100%;
+    z-index: 0;
+    margin-bottom: 10%;
   }
 }
 @media screen and (max-width: 360px) {
