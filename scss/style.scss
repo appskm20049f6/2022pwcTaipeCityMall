@@ -42,10 +42,10 @@ body {
   display: flex;
   flex-direction: column;
   width: 8%;
-  height: 35%;
+  height: 45%;
   position: fixed;
 
-  bottom: 0;
+  bottom: 2%;
   justify-content: flex-end;
   .linnkerbg {
     display: none;
@@ -68,6 +68,10 @@ body {
 
     a {
       margin-left: 8%;
+      font-family: "Italianno";
+      p {
+        font-family: "Italianno";
+      }
     }
   }
   .taggerbg {
@@ -97,6 +101,7 @@ body {
       margin: auto;
       a {
         margin-left: 8%;
+        font-family: "Italianno";
       }
     }
   }
@@ -905,10 +910,10 @@ footer img {
     display: flex;
     flex-direction: column;
     width: 8%;
-    height: 35%;
+    height: 45%;
     position: fixed;
 
-    bottom: 0;
+    bottom: 2%;
     .linnkerbg {
       margin: auto;
       height: 70%;
@@ -1273,10 +1278,10 @@ footer img {
     display: flex;
     flex-direction: column;
     width: 14%;
-    height: 25%;
+    height: 35%;
     position: fixed;
 
-    bottom: 0;
+    bottom: 2%;
   }
   .top-logo {
     width: 100%;
@@ -1405,10 +1410,16 @@ footer img {
     display: flex;
     flex-direction: column;
     width: 30%;
-    height: 40%;
+    height: 50%;
     position: fixed;
 
-    bottom: 0;
+    bottom: 2%;
+    .linnkerbg {
+      display: block;
+    }
+    .taggerbg {
+      display: block;
+    }
   }
   body {
     background-position: center -30px;
@@ -1446,7 +1457,7 @@ footer img {
     justify-content: center;
   }
   .map {
-    margin-top: -10%;
+    margin-top: 1%;
   }
   .map img {
     width: 90%;
@@ -1655,6 +1666,36 @@ footer img {
     width: 68%;
     top: -2.7%;
     font-size: 0.9rem;
+  }
+}
+@media screen and (max-width: 320px) {
+  .hamber {
+    a {
+      text-decoration: none;
+      color: #565656;
+
+      font-size: 1rem;
+    }
+    .close {
+      height: 10vw;
+      width: 10vw;
+      a {
+        font-size: 2rem;
+      }
+    }
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 70%;
+    position: fixed;
+
+    bottom: 2%;
+    .linnkerbg {
+      display: block;
+    }
+    .taggerbg {
+      display: block;
+    }
   }
 }
 

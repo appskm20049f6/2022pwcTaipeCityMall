@@ -41,9 +41,9 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 8%;
-  height: 35%;
+  height: 45%;
   position: fixed;
-  bottom: 0;
+  bottom: 2%;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
@@ -81,6 +81,10 @@ body {
 }
 .hamber .linnker a {
   margin-left: 8%;
+  font-family: "Italianno";
+}
+.hamber .linnker a p {
+  font-family: "Italianno";
 }
 .hamber .taggerbg {
   display: none;
@@ -121,6 +125,7 @@ body {
 }
 .hamber .tagger .open a {
   margin-left: 8%;
+  font-family: "Italianno";
 }
 .hamber .close {
   height: 2vw;
@@ -1073,9 +1078,9 @@ footer img {
         -ms-flex-direction: column;
             flex-direction: column;
     width: 8%;
-    height: 35%;
+    height: 45%;
     position: fixed;
-    bottom: 0;
+    bottom: 2%;
   }
   .hamber a {
     text-decoration: none;
@@ -1434,9 +1439,9 @@ footer img {
         -ms-flex-direction: column;
             flex-direction: column;
     width: 14%;
-    height: 25%;
+    height: 35%;
     position: fixed;
-    bottom: 0;
+    bottom: 2%;
   }
   .hamber a {
     text-decoration: none;
@@ -1572,9 +1577,9 @@ footer img {
         -ms-flex-direction: column;
             flex-direction: column;
     width: 30%;
-    height: 40%;
+    height: 50%;
     position: fixed;
-    bottom: 0;
+    bottom: 2%;
   }
   .hamber a {
     text-decoration: none;
@@ -1587,6 +1592,12 @@ footer img {
   }
   .hamber .close a {
     font-size: 2rem;
+  }
+  .hamber .linnkerbg {
+    display: block;
+  }
+  .hamber .taggerbg {
+    display: block;
   }
   body {
     background-position: center -30px;
@@ -1635,7 +1646,7 @@ footer img {
             justify-content: center;
   }
   .map {
-    margin-top: -10%;
+    margin-top: 1%;
   }
   .map img {
     width: 90%;
@@ -1866,6 +1877,39 @@ footer img {
     width: 68%;
     top: -2.7%;
     font-size: 0.9rem;
+  }
+}
+@media screen and (max-width: 320px) {
+  .hamber {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 40%;
+    height: 70%;
+    position: fixed;
+    bottom: 2%;
+  }
+  .hamber a {
+    text-decoration: none;
+    color: #565656;
+    font-size: 1rem;
+  }
+  .hamber .close {
+    height: 10vw;
+    width: 10vw;
+  }
+  .hamber .close a {
+    font-size: 2rem;
+  }
+  .hamber .linnkerbg {
+    display: block;
+  }
+  .hamber .taggerbg {
+    display: block;
   }
 }
 @-webkit-keyframes slide-top {
