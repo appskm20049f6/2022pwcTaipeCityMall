@@ -181,9 +181,38 @@ let years = "";
 let checkid = document.querySelector("#checkid");
 let checkadd = document.querySelector("#checkadd");
 
-//圖片上傳轉化base64
+//圖片上傳轉化base64正面
+let upp1 = document.querySelector("#upp1");
+let input = document.querySelector("#idcardon");
+let demo = document.querySelector("#onpreview");
+let reader = new FileReader();
+reader.onload = (e) => {
+  demo.src = e.target.result;
+  sessionStorage.setItem("openIDcard", demo.src);
+};
+let upload = (e) => {
+  let uploadimg = e.target.files || e.dataTransfer.files;
+  reader.readAsDataURL(uploadimg[0]);
+  upp1.style.display = "none";
+};
+input.addEventListener("change", upload);
 
-//圖片上傳轉化base64預覽
+//圖片上傳轉化base64反面
+let upp2 = document.querySelector("#upp2");
+let input2 = document.querySelector("#idcardclose");
+let demo2 = document.querySelector("#closepreview");
+let reader2 = new FileReader();
+reader2.onload = (e) => {
+  demo2.src = e.target.result;
+  sessionStorage.setItem("closeIDcard", demo2.src);
+};
+let upload2 = (e) => {
+  let uploadimg = e.target.files || e.dataTransfer.files;
+  reader2.readAsDataURL(uploadimg[0]);
+  upp2.style.display = "none";
+};
+input2.addEventListener("change", upload2);
+//節點
 
 const checkon = (e) => {
   if (e == 1) {

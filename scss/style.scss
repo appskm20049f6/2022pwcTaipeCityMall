@@ -1809,12 +1809,24 @@ footer img {
   display: flex;
   justify-content: space-around;
   .idcardfile {
-    opacity: 1;
+    display: none;
   }
   label {
     position: relative;
   }
-  .upp {
+  .upp1 {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    p {
+      padding: 5%;
+      text-align: center;
+      width: 100%;
+    }
+  }
+  .upp2 {
     width: 100%;
     position: absolute;
     display: flex;

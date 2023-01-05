@@ -2094,12 +2094,12 @@ footer img {
       justify-content: space-around;
 }
 .idcardupload .idcardfile {
-  opacity: 1;
+  display: none;
 }
 .idcardupload label {
   position: relative;
 }
-.idcardupload .upp {
+.idcardupload .upp1 {
   width: 100%;
   position: absolute;
   display: -webkit-box;
@@ -2113,7 +2113,26 @@ footer img {
       -ms-flex-align: center;
           align-items: center;
 }
-.idcardupload .upp p {
+.idcardupload .upp1 p {
+  padding: 5%;
+  text-align: center;
+  width: 100%;
+}
+.idcardupload .upp2 {
+  width: 100%;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.idcardupload .upp2 p {
   padding: 5%;
   text-align: center;
   width: 100%;
