@@ -265,6 +265,27 @@ body {
 .ibendo-1 {
   display: flex;
 }
+.ibendo-3 {
+  display: none;
+  flex-direction: column;
+  font-size: 2.3rem;
+  .inpot {
+    margin: auto;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 3%;
+    gap: 1rem;
+    background-image: url("../img/idcard.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin-top: -14%;
+    p {
+      font-family: "GenSenRounded";
+    }
+  }
+}
 .ibendo-img {
   width: 75%;
   display: flex;
@@ -1393,6 +1414,9 @@ footer img {
 }
 
 @media screen and (max-width: 414px) {
+  .inpot {
+    font-size: 1rem;
+  }
   .hamber {
     a {
       text-decoration: none;
@@ -1733,4 +1757,88 @@ footer img {
   75% {
     transform: translateX(-6px) rotate(1.2deg);
   }
+}
+
+.ibendotitle1 {
+  width: 100%;
+  img {
+    width: 100%;
+  }
+}
+.datainput {
+  display: flex;
+  margin: auto;
+  width: 70%;
+  padding: 10%;
+  gap: 3rem;
+
+  background-image: url("../img/postbg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex-direction: column;
+  align-items: stretch;
+  label {
+    display: flex;
+    font-size: 2.3rem;
+    align-items: stretch;
+    justify-content: flex-start;
+    p {
+      width: 30%;
+    }
+
+    input {
+      width: 40%;
+    }
+  }
+  .years {
+    display: flex;
+    font-size: 2.3rem;
+    input {
+      width: 100%;
+    }
+    p {
+      width: 30%;
+    }
+    label {
+      display: flex;
+      width: 25%;
+    }
+  }
+}
+.idcardupload {
+  display: flex;
+  justify-content: space-around;
+  .idcardfile {
+    opacity: 1;
+  }
+  label {
+    position: relative;
+  }
+  .upp {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    p {
+      padding: 5%;
+      text-align: center;
+      width: 100%;
+    }
+  }
+}
+.point {
+  p {
+    font-size: 2.3rem;
+  }
+}
+.buttoncheck {
+  font-size: 3rem;
+}
+.checkid {
+  display: none;
+}
+
+.checkadd {
+  display: none;
 }

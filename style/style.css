@@ -303,6 +303,38 @@ body {
   display: flex;
 }
 
+.ibendo-3 {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 2.3rem;
+}
+.ibendo-3 .inpot {
+  margin: auto;
+  width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 3%;
+  gap: 1rem;
+  background-image: url("../img/idcard.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  margin-top: -14%;
+}
+.ibendo-3 .inpot p {
+  font-family: "GenSenRounded";
+}
+
 .ibendo-img {
   width: 75%;
   display: -webkit-box;
@@ -1568,6 +1600,9 @@ footer img {
   }
 }
 @media screen and (max-width: 414px) {
+  .inpot {
+    font-size: 1rem;
+  }
   .hamber {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1987,4 +2022,115 @@ footer img {
     -webkit-transform: translateX(-6px) rotate(1.2deg);
             transform: translateX(-6px) rotate(1.2deg);
   }
+}
+.ibendotitle1 {
+  width: 100%;
+}
+.ibendotitle1 img {
+  width: 100%;
+}
+
+.datainput {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  width: 70%;
+  padding: 10%;
+  gap: 3rem;
+  background-image: url("../img/postbg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+.datainput label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 2.3rem;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.datainput label p {
+  width: 30%;
+}
+.datainput label input {
+  width: 40%;
+}
+.datainput .years {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 2.3rem;
+}
+.datainput .years input {
+  width: 100%;
+}
+.datainput .years p {
+  width: 30%;
+}
+.datainput .years label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 25%;
+}
+
+.idcardupload {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.idcardupload .idcardfile {
+  opacity: 1;
+}
+.idcardupload label {
+  position: relative;
+}
+.idcardupload .upp {
+  width: 100%;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.idcardupload .upp p {
+  padding: 5%;
+  text-align: center;
+  width: 100%;
+}
+
+.point p {
+  font-size: 2.3rem;
+}
+
+.buttoncheck {
+  font-size: 3rem;
+}
+
+.checkid {
+  display: none;
+}
+
+.checkadd {
+  display: none;
 }/*# sourceMappingURL=style.css.map */

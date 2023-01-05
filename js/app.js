@@ -36,8 +36,7 @@ let ibendoChange = (c) => {
     for (let index = 0; index < 5; index++) {
       navbar.children[index].children[0].classList.remove("card-change");
     }
-    navbar.children[2].children[0].children[4].children[0].innerHTML =
-      "<p>現在</p>";
+
     title.innerHTML = `<img src="./img/index-title3.png" alt="" data-aos="fade-down" >"`;
     ibendo1.style.display = "none";
     ibendo2.style.display = "none";
@@ -168,5 +167,48 @@ let hamber = (e) => {
     linnkerbg.style.display = "block";
     taggerbg.style.display = "block";
     clos.innerHTML = `<a href="javascript:hamber(1);">🎵</a>`;
+  }
+};
+
+//表單資料記錄傳送
+let post = document.querySelector("#post");
+let nameinput = document.querySelector("#nameinput");
+let phoneNumber = document.querySelector("#phoneNumber");
+let email = document.querySelector("#email");
+let postalcode = document.querySelector("#postalcode");
+let addides = document.querySelector("#addides");
+let years = "";
+let checkid = document.querySelector("#checkid");
+let checkadd = document.querySelector("#checkadd");
+
+//圖片上傳轉化base64
+
+//圖片上傳轉化base64預覽
+
+const checkon = (e) => {
+  if (e == 1) {
+    years = "yes";
+    sessionStorage.setItem("years", 1);
+  }
+  if (e == 0) {
+    years = "no";
+    sessionStorage.setItem("years", 0);
+  }
+};
+
+const settes = () => {
+  sessionStorage.setItem("name", nameinput.value);
+  sessionStorage.setItem("phoneNumber", phoneNumber.value);
+  sessionStorage.setItem("email", email.value);
+  sessionStorage.setItem("postalcode", postalcode.value);
+  sessionStorage.setItem("addides", addides.value);
+  sessionStorage.setItem("name", nameinput.value);
+
+  post.style.display = "none";
+
+  let yearcheck = sessionStorage.getItem("years");
+
+  if (yearcheck == 0) {
+    checkid.style.display = "flex";
   }
 };
