@@ -212,8 +212,8 @@ let upload2 = (e) => {
   upp2.style.display = "none";
 };
 input2.addEventListener("change", upload2);
-//節點
 
+//存是否超過18歲
 const checkon = (e) => {
   if (e == 1) {
     years = "yes";
@@ -225,6 +225,7 @@ const checkon = (e) => {
   }
 };
 
+//暫存表單資料
 const settes = () => {
   sessionStorage.setItem("name", nameinput.value);
   sessionStorage.setItem("phoneNumber", phoneNumber.value);
