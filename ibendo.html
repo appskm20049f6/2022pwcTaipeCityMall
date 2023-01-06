@@ -118,7 +118,11 @@
                     alt=""
                 >
             </div>
-            <div class="datainput">
+            <!-- 第一階段輸入資料 -->
+            <div
+                class="datainput"
+                id="datainput"
+            >
                 <label for="">
                     <p>姓名</p><input
                         type="text"
@@ -198,7 +202,7 @@
                             src="./img/idcard.png"
                             alt=""
                             id="onpreview"
-                            style="height: 22vh; width: 34vh;"
+                            style="height: 17.6vh; width: 27.2vh;"
                         >
                         <div
                             class="upp1"
@@ -221,7 +225,7 @@
                             src="./img/idcard.png"
                             alt=""
                             id="closepreview"
-                            style="height: 22vh; width: 34vh;"
+                            style="height: 17.6vh; width: 27.2vh;"
                         >
                         <div
                             class="upp2"
@@ -242,77 +246,145 @@
                     <p>※請注意！切勿冒用他人身分簽署或辦理文件，此行為將構成偽造文書罪。</p>
                 </div>
             </div>
+            <!-- 沒有18歲 -->
 
-        </div>
-    </div>
+            <div
+                class="checkid"
+                id="checkid"
+            >
 
-
-
-    <div
-        class="checkid"
-        id="checkid"
-    >
-
-        <p>※因當地法規若未滿20歲，需要法定代理人簽章及附上法定代理人的身分
-            證正、反面影本，故需要請您下載活動領獎單,填寫完成後進行郵寄回傳，
-            方能協助您進行獎勵發送。</p>
-        <p> ※點擊下方按鈕，將引導您下載活動領獎單,在看完後於最下方會有下載連
-            結，再請您確認後,再進行下載。</p>
-        <a href="http://serviceplus.gameflier.com/info/content.aspx?count=done&id=11"><img
-                src="./img/download.png"
-                alt=""
-            ></a>
-    </div>
-
-    <div
-        class="checkadd"
-        id="checkadd"
-    >
-    </div>
-
-
-
-
-
-
-    <footer>
-        <img
-            src="./img/footer-backgrond.png"
-            alt=""
-        >
-        <div class="footerli">
-            <div class="copyright">
-                <div class="copyright-a">
-                    <a><img src="./img/footer/comlogo.png"></a>
-                    <a href="https://pwc.gameflier.com/"><img src="./img/footer/website.png"></a>
-                    <a href="https://www.youtube.com/@whitechord"><img src="./img/footer/youtube.png"></a>
-                </div>
-                <div class="copyright-b">
-                    <img src="./img/footer/GAMEFLIERCORP.png">
-                </div>
-
-            </div>
-            <div class="footerlinks">
-                <a href="https://www.facebook.com/PWC.gameflier"><img
-                        src="./img/footer/facebook.png"
-                        alt=""
-                    ></a><a href="https://twitter.com/White_Chord"><img
-                        src="./img/footer/twitter.png"
+                <p>※因當地法規若未滿18歲，需要法定代理人簽章及附上法定代理人的身分
+                    證正、反面影本，故需要請您下載活動領獎單,填寫完成後進行郵寄回傳，
+                    方能協助您進行獎勵發送。</p>
+                <p> ※點擊下方按鈕，將引導您下載活動領獎單,在看完後於最下方會有下載連
+                    結，再請您確認後,再進行下載。</p>
+                <a href="http://serviceplus.gameflier.com/info/content.aspx?count=done&id=11"><img
+                        src="./img/download.png"
                         alt=""
                     ></a>
             </div>
+            <!-- 18歲確認資料 -->
+
+            <div
+                class="checkadd"
+                id="checkadd"
+            >
+                <div class="checkaddID">
+                    <div
+                        class="datainput"
+                        id="datainput"
+                    >
+                        <label>
+                            <p>姓名</p>
+                            <div id="nameinputcheck"></div>
+                        </label>
+                        <label>
+                            <p>手機號碼</p>
+                            <div id="phoneNumbercheck"></div>
+                        </label>
+                        <label>
+                            <p>E-mail</p>
+                            <div id="emailcheck"></div>
+                        </label>
+                        <label>
+                            <p>郵遞區號</p>
+                            <div id="postalcodecheck"></div>
+                        </label>
+                        <label>
+                            <p>寄送地址</p>
+                            <div id="addidescheck"></div>
+                        </label>
+                        <div class="years">
+                            <p>是否已滿18歲</p>
+                            <label for="">
+                                <p>是</p>
+                            </label>
+                        </div>
+                        <div class="idcardupload">
+                            <label id="onpreviewcheck">
+                                <p>身份證正面</p>
+                                <img
+                                    src="./img/idcard.png"
+                                    style="height: 22vh; width: 34vh;"
+                                >
+                            </label>
+                            <label id="closepreviewcheck">
+                                <p>身份證反面</p>
+                                <img
+                                    src="./img/idcard.png"
+                                    style="height: 22vh; width: 34vh;"
+                                >
+                            </label>
+                        </div>
+                        <div
+                            class="checkOK"
+                            onclick="postcheck()"
+                        >
+                            <img
+                                src="./img/button-2.png"
+                                alt=""
+                            >
+                        </div>
+                    </div>
+                    <div class="pointt">
+                        <p>※ 注意事項※</p>
+                        <p>※ 若未滿18歲，依法規定需要法定代理人同意，故需請您下載表單後，附上身分證正反面影本及法定代理人的身分證正反面影本與簽名，再郵寄至台北市南港區南港路二段９５號８樓(郵遞區號3+3：115028）依規定機會中獎獎品價值超過新台幣2萬元（含），將由主辦單位代扣
+                            10% 機會中獎稅 （境外之個人，依法扣繳 20% 稅金）。</p>
+                        <p>※ 機會中獎獎品獎價值如超過
+                            NT$1,000元以上者，依法需納入年度個人綜合所得總額進行申報。扣繳憑單將由主辦單位寄發予得獎者，請務必據實申報。承上，故中獎者需提供並填寫中獎者資料，繳交身分證正反面影本。如中獎者不同意繳交稅款，或不填寫提供相關資料、證件影本者，視為自動放棄獎品，中獎者不得異議。
+                        </p>
+                        <p>※ 本活動收集之個人資料將提供予遊戲新幹線作為《純白和弦》手機遊戲的推廣用途。</p>
+                        <p>※ 本活動贈送的虛寶與實體獎勵，無法折換現金或等值商品。</p>
+                        <p>※ 官方保有以上活動及獎項內容修改之權利，並有權決定修改、取消、暫停或終止活動及贈送內容，若有變更內容，將於活動頁調整，恕不另行通知。官方保留活動隨時修改條款的權利，如有任何爭議，皆以官方之解釋及本活動的最終決策權為準。
+                        </p>
+                    </div>
+                </div>
+                <!-- 18歲上傳完成 -->
+                <!-- 18歲上傳失敗 -->
+
+            </div>
         </div>
-        <div class="copy">
+
+
+
+        <footer>
             <img
-                src="./img/footer/CORP.png"
+                src="./img/footer-backgrond.png"
                 alt=""
             >
-        </div>
+            <div class="footerli">
+                <div class="copyright">
+                    <div class="copyright-a">
+                        <a><img src="./img/footer/comlogo.png"></a>
+                        <a href="https://pwc.gameflier.com/"><img src="./img/footer/website.png"></a>
+                        <a href="https://www.youtube.com/@whitechord"><img src="./img/footer/youtube.png"></a>
+                    </div>
+                    <div class="copyright-b">
+                        <img src="./img/footer/GAMEFLIERCORP.png">
+                    </div>
+
+                </div>
+                <div class="footerlinks">
+                    <a href="https://www.facebook.com/PWC.gameflier"><img
+                            src="./img/footer/facebook.png"
+                            alt=""
+                        ></a><a href="https://twitter.com/White_Chord"><img
+                            src="./img/footer/twitter.png"
+                            alt=""
+                        ></a>
+                </div>
+            </div>
+            <div class="copy">
+                <img
+                    src="./img/footer/CORP.png"
+                    alt=""
+                >
+            </div>
 
 
 
 
-    </footer>
+        </footer>
 
 
 </body>

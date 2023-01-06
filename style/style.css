@@ -2062,7 +2062,7 @@ footer img {
           justify-content: flex-start;
 }
 .datainput label p {
-  width: 30%;
+  width: 35%;
 }
 .datainput label input {
   width: 40%;
@@ -2077,13 +2077,16 @@ footer img {
   width: 100%;
 }
 .datainput .years p {
-  width: 30%;
+  width: 35%;
 }
 .datainput .years label {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 25%;
+}
+.datainput .years label input {
+  width: 100%;
 }
 
 .idcardupload {
@@ -2148,8 +2151,235 @@ footer img {
 
 .checkid {
   display: none;
+  height: 50vh;
+  width: 70%;
+  padding: 10%;
+  gap: 3rem;
+  margin: auto;
+  background-image: url("../img/postbg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: #c4ab7a 2px solid;
+}
+.checkid p {
+  width: 70%;
+  font-size: 2.3rem;
 }
 
 .checkadd {
   display: none;
+}
+.checkadd .checkOK {
+  margin: auto;
+}
+.checkadd .pointt {
+  margin: auto;
+  width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 3%;
+  gap: 1rem;
+  background-image: url("../img/idcard.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  margin-top: 3%;
+}
+.checkadd .pointt p {
+  font-size: 2rem;
+  font-family: "GenSenRounded";
+}
+.checkadd .datainput {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  width: 70%;
+  padding: 10%;
+  gap: 0.1rem;
+  border: #c4ab7a 2px solid;
+  background-image: url("../img/postbg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+.checkadd .datainput label {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 2.3rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.checkadd .datainput label p {
+  width: 50%;
+}
+.checkadd .datainput .years {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 2.3rem;
+}
+.checkadd .datainput .years input {
+  width: 100%;
+}
+.checkadd .datainput .years p {
+  width: 30%;
+}
+.checkadd .datainput .years label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 25%;
+}
+.checkadd .idcardupload {
+  margin-top: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.checkadd .idcardupload .idcardfile {
+  display: none;
+}
+.checkadd .idcardupload label {
+  position: relative;
+}
+.checkadd .idcardupload .upp1 {
+  width: 100%;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.checkadd .idcardupload .upp1 p {
+  padding: 5%;
+  text-align: center;
+  width: 100%;
+}
+.checkadd .idcardupload .upp2 {
+  width: 100%;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.checkadd .idcardupload .upp2 p {
+  padding: 5%;
+  text-align: center;
+  width: 100%;
+}
+.checkadd .point p {
+  font-size: 2.3rem;
+}
+.checkadd .buttoncheck {
+  font-size: 3rem;
+}
+
+@media screen and (max-width: 840px) {
+  .datainput {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: auto;
+    width: 100%;
+    padding: 1%;
+    padding-top: 15%;
+    gap: 3rem;
+    border: #c4ab7a 2px solid;
+    background-image: url("../img/postbg.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .datainput label {
+    width: 70%;
+  }
+  .years {
+    width: 70%;
+  }
+  .years p {
+    width: 50%;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+  .years label {
+    width: 30%;
+  }
+  .idcardupload {
+    width: 80%;
+  }
+  .point {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 80%;
+  }
+  .point p {
+    width: 80%;
+    font-size: 1.3rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .datainput {
+    padding-top: 3%;
+  }
+  .datainput label {
+    font-size: 1.3rem;
+  }
 }/*# sourceMappingURL=style.css.map */

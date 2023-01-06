@@ -171,7 +171,7 @@ let hamber = (e) => {
 };
 
 //表單資料記錄傳送
-let post = document.querySelector("#post");
+let datainput = document.querySelector("#datainput");
 let nameinput = document.querySelector("#nameinput");
 let phoneNumber = document.querySelector("#phoneNumber");
 let email = document.querySelector("#email");
@@ -188,7 +188,7 @@ let demo = document.querySelector("#onpreview");
 let reader = new FileReader();
 reader.onload = (e) => {
   demo.src = e.target.result;
-  sessionStorage.setItem("openIDcard", demo.src);
+  sessionStorage.setItem("IDCardRS", demo.src);
 };
 let upload = (e) => {
   let uploadimg = e.target.files || e.dataTransfer.files;
@@ -204,7 +204,7 @@ let demo2 = document.querySelector("#closepreview");
 let reader2 = new FileReader();
 reader2.onload = (e) => {
   demo2.src = e.target.result;
-  sessionStorage.setItem("closeIDcard", demo2.src);
+  sessionStorage.setItem("IDCardWS", demo2.src);
 };
 let upload2 = (e) => {
   let uploadimg = e.target.files || e.dataTransfer.files;
@@ -217,28 +217,77 @@ input2.addEventListener("change", upload2);
 const checkon = (e) => {
   if (e == 1) {
     years = "yes";
-    sessionStorage.setItem("years", 1);
+    sessionStorage.setItem("isAdult", 1);
   }
   if (e == 0) {
     years = "no";
-    sessionStorage.setItem("years", 0);
+    sessionStorage.setItem("isAdult", 0);
   }
 };
 
 //暫存表單資料
+let nameinputcheck = document.querySelector("#nameinputcheck");
+let phoneNumbercheck = document.querySelector("#phoneNumbercheck");
+let emailcheck = document.querySelector("#emailcheck");
+let postalcodecheck = document.querySelector("#postalcodecheck");
+let addidescheck = document.querySelector("#addidescheck");
+let onpreviewcheck = document.querySelector("#onpreviewcheck");
+let closepreviewcheck = document.querySelector("#closepreviewcheck");
+
 const settes = () => {
   sessionStorage.setItem("name", nameinput.value);
-  sessionStorage.setItem("phoneNumber", phoneNumber.value);
+  sessionStorage.setItem("phone", phoneNumber.value);
   sessionStorage.setItem("email", email.value);
-  sessionStorage.setItem("postalcode", postalcode.value);
-  sessionStorage.setItem("addides", addides.value);
-  sessionStorage.setItem("name", nameinput.value);
+  sessionStorage.setItem("zcode", postalcode.value);
+  sessionStorage.setItem("address", addides.value);
 
-  post.style.display = "none";
-
-  let yearcheck = sessionStorage.getItem("years");
-
+  let yearcheck = sessionStorage.getItem("isAdult");
   if (yearcheck == 0) {
+    datainput.style.display = "none";
     checkid.style.display = "flex";
+    checkadd.style.display = "none";
+  } else if (yearcheck == 1) {
+    datainput.style.display = "none";
+    checkid.style.display = "none";
+    checkadd.style.display = "flex";
+
+    nameinputcheck.innerHTML = `<p>${sessionStorage.getItem("name")}</p>`;
+    phoneNumbercheck.innerHTML = `<p>${sessionStorage.getItem("phone")}</p>`;
+    emailcheck.innerHTML = `<p>${sessionStorage.getItem("email")}</p>`;
+    postalcodecheck.innerHTML = `<p>${sessionStorage.getItem("zcode")}</p>`;
+    addidescheck.innerHTML = `<p>${sessionStorage.getItem("address")}</p>`;
+
+    onpreviewcheck.innerHTML = `
+    <img src="${sessionStorage.getItem("IDCardRS")}"
+    style="height: 17.6vh; width: 27.2vh;">`;
+    closepreviewcheck.innerHTML = `
+    <img src="${sessionStorage.getItem("IDCardWS")}"
+    style="height: 17.6vh; width: 27.2vh;">`;
+  } else {
+    alert("請確認是否填寫完畢。");
   }
+};
+
+const postcheck = () => {
+  let dataId = JSON.stringify({
+    name: sessionStorage.getItem("name"),
+    phone: sessionStorage.getItem("phone"),
+    zcode: sessionStorage.getItem("zcode"),
+    address: sessionStorage.getItem("address"),
+    isAdult: sessionStorage.getItem("isAdult"),
+    IDCardRS: sessionStorage.getItem("IDCardRS"),
+    IDCardWS: sessionStorage.getItem("IDCardWS"),
+  });
+
+  axios({
+    method: "POST",
+    url: "https://pwc.gameflier.com/service/api/taipeicitymall",
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+      "Content-Type": "application/json",
+    },
+    data: dataId,
+  })
+    .then((response) => console.log(response))
+    .catch((error) => console.log(error));
 };

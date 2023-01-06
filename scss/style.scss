@@ -1783,7 +1783,7 @@ footer img {
     align-items: stretch;
     justify-content: flex-start;
     p {
-      width: 30%;
+      width: 35%;
     }
 
     input {
@@ -1797,11 +1797,14 @@ footer img {
       width: 100%;
     }
     p {
-      width: 30%;
+      width: 35%;
     }
     label {
       display: flex;
       width: 25%;
+      input {
+        width: 100%;
+      }
     }
   }
 }
@@ -1849,8 +1852,178 @@ footer img {
 }
 .checkid {
   display: none;
+  height: 50vh;
+  width: 70%;
+  padding: 10%;
+  gap: 3rem;
+  margin: auto;
+  background-image: url("../img/postbg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex-direction: column;
+  align-items: center;
+  border: #c4ab7a 2px solid;
+  p {
+    width: 70%;
+    font-size: 2.3rem;
+  }
 }
 
 .checkadd {
   display: none;
+  .checkOK {
+    margin: auto;
+  }
+  .pointt {
+    margin: auto;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 3%;
+    gap: 1rem;
+    background-image: url("../img/idcard.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin-top: 3%;
+    p {
+      font-size: 2rem;
+      font-family: "GenSenRounded";
+    }
+  }
+  .datainput {
+    display: flex;
+    margin: auto;
+    width: 70%;
+    padding: 10%;
+    gap: 0.1rem;
+    border: #c4ab7a 2px solid;
+    background-image: url("../img/postbg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-direction: column;
+    align-items: stretch;
+    label {
+      width: 100%;
+      display: flex;
+      font-size: 2.3rem;
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: flex-start;
+      p {
+        width: 50%;
+      }
+    }
+    .years {
+      display: flex;
+      font-size: 2.3rem;
+      input {
+        width: 100%;
+      }
+      p {
+        width: 30%;
+      }
+      label {
+        display: flex;
+        width: 25%;
+      }
+    }
+  }
+  .idcardupload {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-around;
+    .idcardfile {
+      display: none;
+    }
+    label {
+      position: relative;
+    }
+    .upp1 {
+      width: 100%;
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      p {
+        padding: 5%;
+        text-align: center;
+        width: 100%;
+      }
+    }
+    .upp2 {
+      width: 100%;
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      p {
+        padding: 5%;
+        text-align: center;
+        width: 100%;
+      }
+    }
+  }
+  .point {
+    p {
+      font-size: 2.3rem;
+    }
+  }
+  .buttoncheck {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .datainput {
+    display: flex;
+
+    margin: auto;
+    width: 100%;
+    padding: 1%;
+    padding-top: 15%;
+    gap: 3rem;
+    border: #c4ab7a 2px solid;
+    background-image: url("../img/postbg.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    align-items: center;
+    label {
+      width: 70%;
+    }
+  }
+  .years {
+    width: 70%;
+    p {
+      width: 50%;
+      flex-grow: 1;
+    }
+    label {
+      width: 30%;
+    }
+  }
+  .idcardupload {
+    width: 80%;
+  }
+  .point {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+
+    p {
+      width: 80%;
+      font-size: 1.3rem;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .datainput {
+    padding-top: 3%;
+  }
+  .datainput label {
+    font-size: 1.3rem;
+  }
 }
