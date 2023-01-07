@@ -188,8 +188,10 @@ let demo = document.querySelector("#onpreview");
 let reader = new FileReader();
 reader.onload = (e) => {
   demo.src = e.target.result;
-  sessionStorage.setItem("IDCardRS", demo.src);
+  onpreviewcheck.innerHTML = `<img src="${demo.src}">`;
+  return demo.src;
 };
+
 let upload = (e) => {
   let uploadimg = e.target.files || e.dataTransfer.files;
   reader.readAsDataURL(uploadimg[0]);
@@ -202,10 +204,13 @@ let upp2 = document.querySelector("#upp2");
 let input2 = document.querySelector("#idcardclose");
 let demo2 = document.querySelector("#closepreview");
 let reader2 = new FileReader();
+let colid2;
 reader2.onload = (e) => {
   demo2.src = e.target.result;
-  sessionStorage.setItem("IDCardWS", demo2.src);
+  closepreviewcheck.innerHTML = `<img src="${demo2.src}">`;
+  return demo2.src;
 };
+
 let upload2 = (e) => {
   let uploadimg = e.target.files || e.dataTransfer.files;
   reader2.readAsDataURL(uploadimg[0]);
@@ -256,13 +261,6 @@ const settes = () => {
     emailcheck.innerHTML = `<p>${sessionStorage.getItem("email")}</p>`;
     postalcodecheck.innerHTML = `<p>${sessionStorage.getItem("zcode")}</p>`;
     addidescheck.innerHTML = `<p>${sessionStorage.getItem("address")}</p>`;
-
-    onpreviewcheck.innerHTML = `<img src="${sessionStorage.getItem(
-      "IDCardRS"
-    )}">`;
-    closepreviewcheck.innerHTML = `<img src="${sessionStorage.getItem(
-      "IDCardWS"
-    )}">`;
   } else {
     alert("請確認是否填寫完畢。");
   }
@@ -273,22 +271,35 @@ const postcheck = () => {
     name: sessionStorage.getItem("name"),
     phone: sessionStorage.getItem("phone"),
     zcode: sessionStorage.getItem("zcode"),
+    email: sessionStorage.getItem("email"),
     address: sessionStorage.getItem("address"),
     isAdult: sessionStorage.getItem("isAdult"),
-    IDCardRS: sessionStorage.getItem("IDCardRS"),
-    IDCardWS: sessionStorage.getItem("IDCardWS"),
+    IDCardRS: demo.src,
+    IDCardWS: demo2.src,
   });
-
   axios({
     method: "POST",
-    url: "http://127.0.0.1:3000/pwc",
-    baseURL: "https://pwc.gameflier.com/service/api/taipeicitymall",
+    url: "https://pwc.gameflier.com/service/api/taipeicitymall",
     headers: {
       "Access-Control-Allow-Origin": "*",
       "Content-Type": "application/json",
     },
     data: dataId,
   })
-    .then((response) => console.log(response))
-    .catch((error) => console.log(error));
+    .then((response) => alert("恭喜得獎！資料上傳成功囉！"))
+    .catch((error) => {
+      axios({
+        method: "POST",
+        url: "http://127.0.0.1:3000/pwc",
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+          "Content-Type": "application/json",
+        },
+        data: dataId,
+      })
+        .then((response) => alert("恭喜得獎！資料上傳成功囉！"))
+        .catch((error) => {
+          alert("上傳失敗...請跟工作人員確認並進行現場填寫資料");
+        });
+    });
 };
