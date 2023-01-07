@@ -2148,6 +2148,7 @@ footer img {
     margin-top: 20%;
   }
   .datainput {
+    position: relative;
     display: flex;
     margin: auto;
     width: 100%;
@@ -2215,4 +2216,17 @@ footer img {
 }
 .checkadd .pointt p {
   font-size: 1rem;
+}
+
+.loading {
+  position: absolute;
+  display: none;
+  height: 100%;
+  width: 100vw;
+  background-color: #000000;
+  top: 0;
+  z-index: 999;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.5;
 }

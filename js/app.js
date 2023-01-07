@@ -7,6 +7,8 @@ let navbar = document.querySelector("#navbar");
 
 let title = document.querySelector("#title");
 
+let loading = document.querySelector("#loading");
+
 let ibendoChange = (c) => {
   if (c == 1) {
     title.innerHTML = `<img src="./img/index-title.png" alt="" data-aos="fade-down">`;
@@ -295,6 +297,15 @@ let compressImage = (url) => {
   convertToBinary(img.src);
 };
 
+let loadingOn = (e) => {
+  if (e == 1) {
+    loading.style.display = "flex";
+  }
+  if (e == 2) {
+    loading.style.display = "none";
+  }
+};
+
 function postcheck() {
   let uu = demo.src;
   let ss = demo2.src;
@@ -309,6 +320,7 @@ function postcheck() {
     IDCardRS: uu,
     IDCardWS: ss,
   });
+  loadingOn(1);
 
   axios({
     method: "POST",
@@ -319,7 +331,10 @@ function postcheck() {
     },
     data: dataId,
   })
-    .then((response) => alert("恭喜得獎！資料上傳成功囉！"))
+    .then((response) => {
+      loadingOn(2);
+      alert("恭喜得獎！資料上傳成功囉！");
+    })
     .catch((error) => {
       axios({
         method: "POST",
@@ -330,8 +345,12 @@ function postcheck() {
         },
         data: dataId,
       })
-        .then((response) => alert("恭喜得獎！資料上傳成功囉！"))
+        .then((response) => {
+          loadingOn(2);
+          alert("恭喜得獎！資料上傳成功囉！");
+        })
         .catch((error) => {
+          loadingOn(2);
           alert("上傳失敗...請跟工作人員確認並進行現場填寫資料");
         });
     });

@@ -2502,6 +2502,7 @@ footer img {
     margin-top: 20%;
   }
   .datainput {
+    position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2590,4 +2591,21 @@ footer img {
 }
 .checkadd .pointt p {
   font-size: 1rem;
+}
+
+.loading {
+  position: absolute;
+  display: none;
+  height: 100%;
+  width: 100vw;
+  background-color: #000000;
+  top: 0;
+  z-index: 999;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  opacity: 0.5;
 }/*# sourceMappingURL=style.css.map */
