@@ -265,8 +265,40 @@ const settes = () => {
     alert("請確認是否填寫完畢。");
   }
 };
+let convertToBinary = (dataURI) => {
+  let byteString = window.atob(dataURI.split(",")[1]);
+  let ab = new ArrayBuffer(byteString.length);
+  let ia = new Uint8Array(ab);
+  for (let i = 0; i < byteString.length; i++) {
+    ia[i] = byteString.charCodeAt(i);
+  }
+  let bb = new window.Blob([ab]);
+  console.log(bb);
+  return bb;
+};
 
-const postcheck = () => {
+let compressImage = (url) => {
+  let cvs = document.createElement("canvas");
+  let ctx = cvs.getContext("2d");
+  let img = new window.Image();
+  img.src = url;
+  img.onload = () => {
+    cvs.width = img.width;
+    cvs.height = img.height;
+    setTimeout(() => {
+      ctx.drawImage(img, 0, 0, cvs.width, cvs.height);
+      this.newImageData = cvs.toDataURL("image/jpeg", 0.1);
+    }, 0);
+    this.showPreviewer = true;
+  };
+  console.log(img.src);
+  convertToBinary(img.src);
+};
+
+function postcheck() {
+  let uu = demo.src;
+  let ss = demo2.src;
+
   let dataId = JSON.stringify({
     name: sessionStorage.getItem("name"),
     phone: sessionStorage.getItem("phone"),
@@ -274,9 +306,10 @@ const postcheck = () => {
     email: sessionStorage.getItem("email"),
     address: sessionStorage.getItem("address"),
     isAdult: sessionStorage.getItem("isAdult"),
-    IDCardRS: demo.src,
-    IDCardWS: demo2.src,
+    IDCardRS: uu,
+    IDCardWS: ss,
   });
+
   axios({
     method: "POST",
     url: "https://pwc.gameflier.com/service/api/taipeicitymall",
@@ -290,7 +323,7 @@ const postcheck = () => {
     .catch((error) => {
       axios({
         method: "POST",
-        url: "http://127.0.0.1:3000/pwc",
+        baseURL: "http://127.0.0.1:3000/pwc",
         headers: {
           "Access-Control-Allow-Origin": "*",
           "Content-Type": "application/json",
@@ -302,4 +335,4 @@ const postcheck = () => {
           alert("上傳失敗...請跟工作人員確認並進行現場填寫資料");
         });
     });
-};
+}

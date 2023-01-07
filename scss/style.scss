@@ -2126,3 +2126,93 @@ footer img {
     }
   }
 }
+
+@media screen and (max-width: 420px) {
+  #onpreview {
+    height: 13.2vh;
+    width: 20.4vh;
+  }
+  #closepreview {
+    height: 13.2vh;
+    width: 20.4vh;
+  }
+  #onpreviewcheck {
+    height: 13.2vh;
+    width: 20.4vh;
+  }
+  #closepreviewcheck {
+    height: 13.2vh;
+    width: 20.4vh;
+  }
+  .ibendotitle1 {
+    margin-top: 20%;
+  }
+  .datainput {
+    display: flex;
+    margin: auto;
+    width: 100%;
+    padding: 1%;
+    padding-top: 10%;
+    gap: 1rem;
+    border: #c4ab7a 2px solid;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    align-items: center;
+    label {
+      display: flex;
+      width: 90%;
+      font-size: 1.3rem;
+      p {
+        flex-grow: 1;
+      }
+      input {
+        flex-grow: 3;
+      }
+    }
+  }
+  .datainputcheck {
+    width: 50%;
+    .idcardupload {
+      display: flex;
+      align-items: center;
+
+      gap: 1%;
+    }
+  }
+  #onpreviewcheck img {
+    width: 100%;
+  }
+  #closepreviewcheck img {
+    width: 100%;
+  }
+  .years {
+    width: 70%;
+    p {
+      width: 50%;
+      flex-grow: 1;
+      font-size: 1.3rem;
+    }
+    label {
+      width: 30%;
+    }
+  }
+  .idcardupload {
+    width: 80%;
+  }
+  .point {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+
+    p {
+      width: 80%;
+      font-size: 1.3rem;
+    }
+  }
+}
+.checkadd .pointt p {
+  font-size: 1rem;
+}
