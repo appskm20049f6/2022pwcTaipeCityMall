@@ -2023,10 +2023,39 @@ footer img {
             transform: translateX(-6px) rotate(1.2deg);
   }
 }
+#onpreview {
+  height: 22vh;
+  width: 34vh;
+}
+
+#closepreview {
+  height: 22vh;
+  width: 34vh;
+}
+
+#onpreviewcheck {
+  height: 22vh;
+  width: 34vh;
+}
+
+#closepreviewcheck {
+  height: 22vh;
+  width: 34vh;
+}
+
 .ibendotitle1 {
   width: 100%;
 }
 .ibendotitle1 img {
+  width: 100%;
+}
+
+.datainput .labeldiv {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+.datainput .labeldiv p {
   width: 100%;
 }
 
@@ -2054,12 +2083,15 @@ footer img {
   display: -ms-flexbox;
   display: flex;
   font-size: 2.3rem;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+}
+@media screen and (max-width: 840px) {
+  .datainput label {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
 }
 .datainput label p {
   width: 35%;
@@ -2203,64 +2235,6 @@ footer img {
   font-size: 2rem;
   font-family: "GenSenRounded";
 }
-.checkadd .datainput {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: auto;
-  width: 70%;
-  padding: 10%;
-  gap: 0.1rem;
-  border: #c4ab7a 2px solid;
-  background-image: url("../img/postbg.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-}
-.checkadd .datainput label {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  font-size: 2.3rem;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-}
-.checkadd .datainput label p {
-  width: 50%;
-}
-.checkadd .datainput .years {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  font-size: 2.3rem;
-}
-.checkadd .datainput .years input {
-  width: 100%;
-}
-.checkadd .datainput .years p {
-  width: 30%;
-}
-.checkadd .datainput .years label {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 25%;
-}
 .checkadd .idcardupload {
   margin-top: 5%;
   display: -webkit-box;
@@ -2313,25 +2287,41 @@ footer img {
   text-align: center;
   width: 100%;
 }
-.checkadd .point p {
-  font-size: 2.3rem;
-}
 .checkadd .buttoncheck {
   font-size: 3rem;
 }
 
 @media screen and (max-width: 840px) {
+  #onpreview {
+    height: 13.2vh;
+    width: 20.4vh;
+  }
+  #closepreview {
+    height: 13.2vh;
+    width: 20.4vh;
+  }
+  #onpreviewcheck {
+    height: 13.2vh;
+    width: 20.4vh;
+  }
+  #closepreviewcheck {
+    height: 13.2vh;
+    width: 20.4vh;
+  }
+  .ibendotitle1 {
+    margin-top: 20%;
+  }
   .datainput {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     margin: auto;
-    width: 100%;
+    width: 80%;
     padding: 1%;
     padding-top: 15%;
     gap: 3rem;
     border: #c4ab7a 2px solid;
-    background-image: url("../img/postbg.png");
+    background-image: none;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center center;
@@ -2341,6 +2331,7 @@ footer img {
   }
   .datainput label {
     width: 70%;
+    font-size: 1.3rem;
   }
   .years {
     width: 70%;
@@ -2350,6 +2341,121 @@ footer img {
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
+    font-size: 1.3rem;
+  }
+  .years label {
+    width: 30%;
+  }
+  .idcardupload {
+    width: 80%;
+  }
+  .point {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+  .point p {
+    width: 80%;
+    font-size: 1.3rem;
+  }
+  .datainputcheck {
+    width: 50%;
+  }
+  .datainputcheck .idcardupload {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 1%;
+  }
+}
+#onpreviewcheck {
+  width: 100%;
+}
+
+#closepreviewcheck {
+  width: 100%;
+}
+
+@media screen and (max-width: 780px) {
+  #onpreview {
+    height: 13.2vh;
+    width: 20.4vh;
+  }
+  #closepreview {
+    height: 13.2vh;
+    width: 20.4vh;
+  }
+  #onpreviewcheck {
+    height: 13.2vh;
+    width: 20.4vh;
+  }
+  #closepreviewcheck {
+    height: 13.2vh;
+    width: 20.4vh;
+  }
+  .ibendotitle1 {
+    margin-top: 20%;
+  }
+  .datainput {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: auto;
+    width: 80%;
+    padding: 1%;
+    padding-top: 10%;
+    gap: 1rem;
+    border: #c4ab7a 2px solid;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .datainput label {
+    width: 70%;
+    font-size: 1.3rem;
+  }
+  .datainputcheck {
+    width: 50%;
+  }
+  .datainputcheck .idcardupload {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 1%;
+  }
+  #onpreviewcheck img {
+    width: 100%;
+  }
+  #closepreviewcheck img {
+    width: 100%;
+  }
+  .years {
+    width: 70%;
+  }
+  .years p {
+    width: 50%;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    font-size: 1.3rem;
   }
   .years label {
     width: 30%;
@@ -2372,14 +2478,6 @@ footer img {
   }
   .point p {
     width: 80%;
-    font-size: 1.3rem;
-  }
-}
-@media screen and (max-width: 500px) {
-  .datainput {
-    padding-top: 3%;
-  }
-  .datainput label {
     font-size: 1.3rem;
   }
 }/*# sourceMappingURL=style.css.map */

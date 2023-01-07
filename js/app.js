@@ -257,12 +257,12 @@ const settes = () => {
     postalcodecheck.innerHTML = `<p>${sessionStorage.getItem("zcode")}</p>`;
     addidescheck.innerHTML = `<p>${sessionStorage.getItem("address")}</p>`;
 
-    onpreviewcheck.innerHTML = `
-    <img src="${sessionStorage.getItem("IDCardRS")}"
-    style="height: 17.6vh; width: 27.2vh;">`;
-    closepreviewcheck.innerHTML = `
-    <img src="${sessionStorage.getItem("IDCardWS")}"
-    style="height: 17.6vh; width: 27.2vh;">`;
+    onpreviewcheck.innerHTML = `<img src="${sessionStorage.getItem(
+      "IDCardRS"
+    )}">`;
+    closepreviewcheck.innerHTML = `<img src="${sessionStorage.getItem(
+      "IDCardWS"
+    )}">`;
   } else {
     alert("請確認是否填寫完畢。");
   }
@@ -281,7 +281,8 @@ const postcheck = () => {
 
   axios({
     method: "POST",
-    url: "https://pwc.gameflier.com/service/api/taipeicitymall",
+    url: "http://127.0.0.1:3000/pwc",
+    baseURL: "https://pwc.gameflier.com/service/api/taipeicitymall",
     headers: {
       "Access-Control-Allow-Origin": "*",
       "Content-Type": "application/json",
