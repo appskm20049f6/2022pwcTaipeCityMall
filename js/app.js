@@ -85,7 +85,7 @@ let changeDate = (day) => {
     //確認今天幾個人直播並劃出卡
     let vtuberArr = [];
 
-    for (let index = 0; index < 76; index++) {
+    for (let index = 0; index < 77; index++) {
       if (response.data[index].date == day) {
         vtuberArr.push(response.data[index]);
       }
